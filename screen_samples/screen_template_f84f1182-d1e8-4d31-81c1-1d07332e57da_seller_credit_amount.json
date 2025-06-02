@@ -1,0 +1,73 @@
+{
+  "screen_template_id": "f84f1182-d1e8-4d31-81c1-1d07332e57da",
+  "name": "seller_credit_amount",
+  "state": "draft",
+  "title": "How much money would you like the seller to credit back to you?",
+  "label": "Credit Amount",
+  "description": "This is money that the seller would normally pay to the buyer's agent if you weren't using HomeBuyMe.",
+  "stage": "final_details",
+  "section": "credits_to_buyer",
+  "scope": {
+    "seller_credit": true
+  },
+  "tips": "The seller credit amount may be limited by your lender and the purchase price.",
+  "tip_links": {},
+  "small_print": "The final credit amount must be approved by your lender and documented in your purchase agreement.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SELLER-CREDIT-AMOUNT-2024-001",
+    "notes": "Amount of seller credit requested"
+  },
+  "components": {
+    "seller_credit_amount": {
+      "id": "62f1411a-421e-47da-b430-2219024022b5",
+      "component_type": "input_currency",
+      "name": "seller_credit_amount",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": {
+        "min": 0,
+        "max": 5000,
+        "hint": "Be careful not to ask for too much credit as it could weaken your offer.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "currency",
+        "required": true,
+        "min_value": 0,
+        "max_value": 1000000
+      },
+      "formatting": {
+        "type": "currency",
+        "decimal_places": 0,
+        "alignment": "RIGHT",
+        "mask": "#,###.##"
+      },
+      "tooltip": "Enter the amount of seller credit requested",
+      "fields": [
+        {
+          "id": "b6f88c7e-bccf-4949-bcc7-727979f57808",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter amount of legitimate buyer expenses only",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

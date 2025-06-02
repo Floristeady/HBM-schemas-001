@@ -1,0 +1,92 @@
+{
+  "screen_template_id": "690b76b9-f0f2-4408-8e69-ac1dfda63543",
+  "name": "purchase_price",
+  "state": "draft",
+  "title": "How much would you like to offer for the property?",
+  "label": "Offer Price",
+  "description": "Enter the amount you'd like to pay for the property.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {},
+  "tips": "Consider market conditions and your budget when making your offer. Check recent sales in the area and consult our articles on making competitive offers.",
+  "tip_links": {
+    "making_the_right_offer": {
+      "label": "Making the Right Offer",
+      "url": "https://www.homebuyme.com/insights/making-the-right-offer-tips-to-avoid-overpaying-or-underbidding/"
+    }
+  },
+  "small_print": "It is recommended and common practice to make an offer within 5-10% of the listing price depending on whether it is currently a buyer's or seller's market",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PURCHASE-PRICE-2024-001",
+    "notes": "Purchase price collection screen"
+  },
+  "components": {
+    "purchase_price": {
+      "id": "35ac003d-753a-485e-a034-306e7cd99966",
+      "component_type": "input_currency",
+      "name": "purchase_price",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 0,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "warning": "",
+        "hint": "Your offer amount is essential for upcoming questions in your offer. Enter a value that you are comfortable with, you can always revise it later."
+      },
+      "validation": {
+        "value_type": "currency",
+        "required": true
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter your offer amount in dollars",
+      "fields": [
+        {
+          "id": "b049d1c5-f4f8-443f-b0ad-98de32e4d538",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter offer amount",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "TEXT",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [
+        {
+          "rule": {
+            "id": "53f118df-bb47-437c-ae03-975b5739e15d",
+            "condition": {
+              "id": "8195b8ce-ea4d-4c9e-890b-5113b992a82f",
+              "path": "this.value",
+              "operator": "not_equals",
+              "value": null
+            },
+            "action": {
+              "id": "d3cb1847-61c1-4d50-9ddc-2b9c0ac13298",
+              "path": "globals",
+              "operation": "set",
+              "value": {
+                "name": "purchase_price",
+                "value": "this.value"
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    }
+  }
+}

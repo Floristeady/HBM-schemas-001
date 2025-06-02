@@ -1,0 +1,148 @@
+{
+  "screen_template_id": "c827b63d-a0b5-42a2-8563-1c6168d53489",
+  "name": "seller_credit",
+  "state": "draft",
+  "title": "Would you like the seller to credit back funds to you at closing?",
+  "label": "Credits to Buyer",
+  "description": "This could be used to cover your costs for HomeBuyMe services or other miscellaneous costs you incur.",
+  "stage": "final_details",
+  "section": "credits_to_buyer",
+  "scope": {},
+  "tips": "Remember when you ask this, you are effectively asking the seller to take less for their property. Make sure you choose the right battle here as you could be weakening your offer beyond the seller's comfort level.",
+  "tip_links": {
+    "Seller Credits": {
+      "label": "Understanding Seller Credits",
+      "url": "https://homebuyme.com/insights/seller-credit-to-buyer-what-it-is-and-how-it-works/"
+    }
+  },
+  "small_print": "Seller credits must be disclosed to and approved by your lender as they may affect your loan terms. The seller credit amount that is customary and perrmissible will vary depending on the amount of your down payment.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SELLER-CREDIT-2024-001",
+    "notes": "Selection for seller credit at closing"
+  },
+  "components": {
+    "seller_credit": {
+      "id": "3955d64c-5375-499a-a745-ec42598984d1",
+      "component_type": "select_single_cards",
+      "name": "seller_credit",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether you want a seller credit",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "e2b22c78-6f1b-458e-8cbd-87bf5083cfd2",
+          "component_type": "select_card",
+          "name": "seller_credit",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if you want seller credit",
+          "fields": [
+            {
+              "id": "b2a2f399-9100-48f1-92f2-bdfcfc43e25c",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "e87bb473-8d47-47b0-a214-ac41806544fe",
+              "name": "description",
+              "label": null,
+              "value": "Request seller credit"
+            },
+            {
+              "id": "e56f0bd6-04d9-4b85-9c35-f443ea712e59",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "3516f47d-43d0-45ed-b4a6-04af1e415a7f",
+                "condition": {
+                  "id": "1e7b09a6-02d2-4807-bd64-db0b34d02e90",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "cb8cd97b-f790-4d10-bcdb-73dc71499abd",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "seller_credit",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "31dbf071-30c8-4511-a00b-05768a5c6ff4",
+          "component_type": "select_card",
+          "name": "seller_credit_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if you DO NOT want seller credit",
+          "fields": [
+            {
+              "id": "4fd6dd6e-24b1-496a-893e-6c2f4a447756",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "9c6c918e-831b-4c42-af92-3f3001c5d77a",
+              "name": "description",
+              "label": null,
+              "value": "No seller credit needed"
+            },
+            {
+              "id": "9e2d46ea-175e-45a1-a42c-9cf988ae1930",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

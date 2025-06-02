@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "3af5a5c6-9797-44cd-92ef-18901e8c4e3b",
+  "name": "buyer3_entity_name",
+  "state": "draft",
+  "title": "Please enter a generic name for the Authorized Representative.",
+  "label": "Third Rep Name",
+  "description": "If Trust, type \"trustee of the trust\" or a simplified trust name like \"John/Jane Doe,\" \"co-trustee\" or \"Doe Revocable Family Trust.\" If Property is sold under the jurisdiction of a probate court, type \"executor\" or \"administrator,\" or a simplified probate name like \"John/Jane Doe, executor\" or \"Estate of John/Jane Doe.\"",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer3_type_entity": true
+  },
+  "tips": "Ensure the entity name matches entity documentation and follows any required naming conventions for your jurisdiction.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER3-ENTITY-2024-001",
+    "notes": "Third buyer's entity name"
+  },
+  "components": {
+    "buyer3_entity_name": {
+      "id": "4071c2d2-a787-4049-ab11-a748c1857e0a",
+      "component_type": "input_text_line",
+      "name": "buyer3_entity_name",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the entity name",
+      "fields": [
+        {
+          "id": "0cc42797-2450-4aa3-9151-06119a0a2fa9",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter entity name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

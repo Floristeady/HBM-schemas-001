@@ -1,0 +1,64 @@
+{
+  "screen_template_id": "44566817-89e1-4cac-909c-b2b842783ed1",
+  "name": "coe_proposed_date",
+  "state": "draft",
+  "title": "On what date would you like closing to occur?",
+  "label": "Closing Date",
+  "description": "This is the date when close of escrow will occur.",
+  "stage": "final_details",
+  "section": "closing",
+  "scope": {
+    "coe_date_after_accept": true
+  },
+  "tips": "Choose a date that allows enough time for all contingencies to be met.",
+  "tip_links": {},
+  "small_print": "The actual closing date may be adjusted based on various factors including loan approval and inspections.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "CLOSING-DATE-2024-001",
+    "notes": "Specific closing date selection"
+  },
+  "components": {
+    "coe_proposed_date": {
+      "id": "dcb47889-bd6e-4d1b-8845-34d6045ebba4",
+      "component_type": "pick_date_time",
+      "name": "coe_proposed_date",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "date",
+        "required": true
+      },
+      "formatting": {
+        "type": "date",
+        "mask": "MM/DD/YYYY"
+      },
+      "tooltip": "Select the proposed closing date",
+      "fields": [
+        {
+          "id": "7a6eaf9b-ae6d-4aba-9483-4a0f637e7def",
+          "name": "placeholder",
+          "label": null,
+          "value": "Select closing date",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

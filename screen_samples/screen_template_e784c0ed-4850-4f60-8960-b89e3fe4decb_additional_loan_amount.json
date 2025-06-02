@@ -1,0 +1,108 @@
+{
+  "screen_template_id": "e784c0ed-4850-4f60-8960-b89e3fe4decb",
+  "name": "additional_loan_amount",
+  "state": "draft",
+  "title": "How much additional money do you intend to borrow?",
+  "label": "2nd Loan Amount",
+  "description": "Tell us the amount of the additional loan.",
+  "stage": "basics",
+  "section": "funds_and_financing",
+  "scope": {
+    "additional_loan_yes": true
+  },
+  "tips": "Your second loan amount combined with your first loan will determine your total monthly payments and closing costs.",
+  "tip_links": {},
+  "small_print": "The combined loan-to-value ratio of both loans may affect your interest rates and approval odds.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SECOND-LOAN-AMT-2024-001",
+    "notes": "Used for total financing calculations"
+  },
+  "components": {
+    "additional_loan_amount": {
+      "id": "b36414a6-4739-4875-8099-0ed9388df820",
+      "order": 1,
+      "component_type": "input_currency",
+      "name": "additional_loan_amount",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 0,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "currency",
+        "required": true
+      },
+      "formatting": {
+        "type": "currency",
+        "alignment": "right",
+        "mask": "#,###.##"
+      },
+      "tooltip": "Enter the amount of your second loan",
+      "fields": [
+        {
+          "id": "a86d8d3b-9790-4137-986d-981c3a5ee8e5",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter loan amount",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    },
+    "additional_loan_percent_of_purchase_price": {
+      "id": "f013c000-9536-4bbc-a544-d6f38e5d7279",
+      "order": 2,
+      "component_type": "input_percentage",
+      "name": "additional_loan_percent_of_purchase_price",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": false,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": "(parent.additional_loan_amount.value / globals.purchase_price) * 100",
+      "is_value_dynamic": true,
+      "suggested": null,
+      "validation": {
+        "value_type": "percentage",
+        "required": false
+      },
+      "formatting": {
+        "type": "percentage",
+        "alignment": "right",
+        "mask": "#,###.##%"
+      },
+      "tooltip": "Percentage of purchase price",
+      "fields": [
+        {
+          "id": "5f7369c0-1990-424a-b67e-5f6e3e42fb98",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "0",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

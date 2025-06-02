@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "7bd8f4e0-1db4-4a45-a792-eaaeee5c8f13",
+  "name": "buyer1_name_no_entity",
+  "state": "draft",
+  "title": "First Signer's Name",
+  "label": "First Signer",
+  "description": "Please enter the full legal name of the first signer.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer_entity_no": true
+  },
+  "tips": "Enter your name exactly as it appears on your legal identification documents.",
+  "tip_links": {},
+  "small_print": "Your name must match your legal identification exactly for all official documentation.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER-NAME-2024-001",
+    "notes": "First signer's legal name"
+  },
+  "components": {
+    "buyer1_name_no_entity": {
+      "id": "bddeb50a-0bfe-4dac-a7e3-b96c1c29a515",
+      "component_type": "input_text_line",
+      "name": "buyer1_name_no_entity",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter your full legal name",
+      "fields": [
+        {
+          "id": "d48e3d1b-551a-4851-8081-02ae084ba59e",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter full legal name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "16e28333-ac40-46db-a60f-ad363a82316e",
+  "name": "buyer4_entity_title",
+  "state": "draft",
+  "title": "Fourth Signer's Title",
+  "label": "Fourth Signer Title",
+  "description": "If applicable, please enter the fourth signer's title in the entity.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer4_type_entity": true
+  },
+  "tips": "Enter the official title that reflects the signer's role for the type of entity (e.g., Director, Manager, Partner, President, CEO, Trustee, Executor, etc.).",
+  "tip_links": {},
+  "small_print": "The title must accurately reflect your legal authority within the entity.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER4-TITLE-2024-001",
+    "notes": "Fourth signer's title in entity"
+  },
+  "components": {
+    "buyer4_entity_title": {
+      "id": "2abb8627-b008-4958-9604-38933ac5f8b7",
+      "component_type": "input_text_line",
+      "name": "buyer4_entity_title",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 50
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter your title in the entity",
+      "fields": [
+        {
+          "id": "be90e914-0342-4e8b-aa48-fa5f0151d70d",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter title (e.g., Trustee, Manager)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

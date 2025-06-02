@@ -1,0 +1,64 @@
+{
+  "screen_template_id": "2cf2e1ad-7178-4077-a311-789c95327232",
+  "name": "increased_deposit_date",
+  "state": "draft",
+  "title": "On what date would you like to deliver the additional Earnest Money?",
+  "label": "2nd Deposit Date",
+  "description": "This is the date on which the funds must be transferred to the Escrow Holder.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "increased_deposit_on_date": true
+  },
+  "tips": "Choose a date that gives you enough time to arrange the transfer of funds.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "INCREASED-DEPOSIT-DATE-2024-001",
+    "notes": "Date selection for second earnest money deposit"
+  },
+  "components": {
+    "increased_deposit_date": {
+      "id": "49031b79-4968-4b53-920f-eefb56ad74df",
+      "component_type": "pick_date_time",
+      "name": "increased_deposit_date",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "date",
+        "required": true
+      },
+      "formatting": {
+        "type": "date",
+        "mask": "MM/DD/YYYY"
+      },
+      "tooltip": "Select the date for your additional earnest money deposit",
+      "fields": [
+        {
+          "id": "6f154caf-8394-43c6-b450-e84aa62d077b",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "screen_template_id": "d755f468-8466-4fa2-ad3f-baca3d7c33da",
+  "name": "contingency_loan_days",
+  "state": "draft",
+  "title": "Within how many days after Acceptance will the Loan Contingency be removed?",
+  "label": "Loan Contingency Days",
+  "description": "This applies because you chose not to waive this contingency.",
+  "stage": "standard",
+  "section": "contingencies",
+  "scope": {
+    "contingency_loan": true
+  },
+  "tips": "The loan contingency removal timeline should align with your lender's expected processing time.",
+  "tip_links": {},
+  "small_print": "The typical timeline for removal of the loan contingency is 17 days. Missing the contingency removal deadline may affect your contract rights.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LOAN-CONTINGENCY-DAYS-2024-001",
+    "notes": "Days until loan contingency removal"
+  },
+  "components": {
+    "contingency_loan_days": {
+      "id": "8175db75-901d-4226-b568-a48296d2fcfa",
+      "component_type": "input_number",
+      "name": "contingency_loan_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": 17,
+      "suggested": {
+        "max": 25,
+        "hint": "Anything over 25 days may affect your offer's competitiveness.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 99
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days for loan contingency removal",
+      "fields": [
+        {
+          "id": "64894d23-5a71-44c5-a5a6-e17b2c994b33",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (up to 25)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

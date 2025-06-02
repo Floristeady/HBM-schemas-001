@@ -1,0 +1,68 @@
+{
+  "screen_template_id": "4558b271-5f1f-43d3-9f5d-a7b2d4e65e18",
+  "name": "other_report_text",
+  "state": "draft",
+  "title": "Please name or describe the other report you'd like to include with the Hazard Report.",
+  "label": "Other Report Name",
+  "description": "Give enough detail for the seller to fully understand.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {
+    "other_report": true
+  },
+  "tips": "Be specific about the type of report and why it's needed.",
+  "tip_links": {},
+  "small_print": "Clear descriptions help avoid misunderstandings about report requirements.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "OTHER-REPORT-TEXT-2024-001",
+    "notes": "Description of additional hazard reports"
+  },
+  "components": {
+    "other_report_text": {
+      "id": "3e71d84a-0f1a-414c-b48a-00feecfe7113",
+      "component_type": "input_text_area",
+      "name": "other_report_text",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is required based on your previous choices.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 10,
+        "max_length": 1000
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe the additional report(s) needed",
+      "fields": [
+        {
+          "id": "3f9db477-c967-4ce0-8886-2d8dbb5d662a",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter report name and description",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

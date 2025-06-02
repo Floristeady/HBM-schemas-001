@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "31b4511d-6ade-417b-b147-f61039671ce3",
+  "name": "buyer1_entity_title",
+  "state": "draft",
+  "title": "First Signer's Title",
+  "label": "First Signer Title",
+  "description": "If applicable, please enter the first signer's title in the entity.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer1_type_entity": true
+  },
+  "tips": "Enter the official title that reflects the signer's role for the type of entity (e.g., Director, Manager, Partner, President, CEO, Trustee, Executor, etc.).",
+  "tip_links": {},
+  "small_print": "The title should accurately reflect the signer's legal authority to act on behalf of the entity.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SIGNER-TITLE-2024-001",
+    "notes": "First signer's title in entity"
+  },
+  "components": {
+    "buyer1_entity_title": {
+      "id": "b741bf35-2131-47c0-bb42-1b12cfbf72e6",
+      "component_type": "input_text_line",
+      "name": "buyer1_entity_title",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 50
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter first signer's title",
+      "fields": [
+        {
+          "id": "00b9c5fd-f9a8-48b0-affb-619e9b7e97c2",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter title (e.g., Trustee, Executor)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

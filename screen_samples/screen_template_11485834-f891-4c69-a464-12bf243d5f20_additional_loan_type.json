@@ -1,0 +1,224 @@
+{
+  "screen_template_id": "11485834-f891-4c69-a464-12bf243d5f20",
+  "name": "additional_loan_type",
+  "state": "draft",
+  "title": "What kind of additional loan will you have?",
+  "label": "2nd Loan Type",
+  "description": "Conventional, or Seller Financing, or Other?",
+  "stage": "basics",
+  "section": "funds_and_financing",
+  "scope": {
+    "additional_loan_yes": true
+  },
+  "tips": "Different types of additional loans can affect your financing options and terms. Understanding each type will help you make the best choice for your situation.",
+  "tip_links": {},
+  "small_print": "The type of additional loan you select may impact your primary loan terms and closing requirements. Please consult with your loan officer for specific details.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ADDITIONAL-LOAN-2024-001",
+    "notes": "Critical for loan structuring and underwriting"
+  },
+  "components": {
+    "additional_loan_type": {
+      "id": "58a94ab0-5d43-46c3-8439-dea359bb6369",
+      "component_type": "select_single_cards",
+      "name": "additional_loan_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select the type of additional loan you plan to use",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "a428f12a-b472-430e-8a5e-f6c6e42456d1",
+          "component_type": "select_card",
+          "name": "additional_loan_type_conventional",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if this will be a conventional second mortgage",
+          "fields": [
+            {
+              "id": "f58ffc9d-8d22-4268-8f48-aa11bcf9070f",
+              "name": "label",
+              "label": null,
+              "value": "Conventional"
+            },
+            {
+              "id": "74bf6eea-3436-4fa3-b2ed-528daf88394c",
+              "name": "description",
+              "label": null,
+              "value": "Traditional second mortgage from a bank or lender"
+            },
+            {
+              "id": "dc92a034-c035-404b-9f3f-c8707d1d4ac4",
+              "name": "image",
+              "label": null,
+              "value": "19_hand_giving_money.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "53320c6f-a89e-4859-8250-be6bd5f171ef",
+                "condition": {
+                  "id": "a432404b-aeba-4345-b3ef-b7ee0aea6e2e",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "cedf813d-0f71-40c6-8a00-ddd6cf753b2f",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "additional_loan_type_conventional",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ee8de17a-e0f2-4965-a2ea-20aa1f36116c",
+          "component_type": "select_card",
+          "name": "additional_loan_type_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if the seller will provide financing",
+          "fields": [
+            {
+              "id": "3fed9f9a-b67f-40a2-a9c7-3d97c35c1ce8",
+              "name": "label",
+              "label": null,
+              "value": "Seller Financing"
+            },
+            {
+              "id": "73c858c9-905b-4cc8-a372-303f0d366245",
+              "name": "description",
+              "label": null,
+              "value": "The seller will provide additional financing"
+            },
+            {
+              "id": "109031c6-7363-4902-a923-dff4a12c932b",
+              "name": "image",
+              "label": null,
+              "value": "20_bills.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "68a4ea4c-48c6-4d8a-afa3-a14796786942",
+                "condition": {
+                  "id": "29439adf-c209-42bc-8bf0-7f4a12183fb8",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "803e80a5-8605-45de-9e11-04b5d9358fa6",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "additional_loan_type_seller",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ef599843-a093-4aa6-a1fe-a4cc0e05d59e",
+          "component_type": "select_card",
+          "name": "additional_loan_type_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if you have a different type of additional financing",
+          "fields": [
+            {
+              "id": "38209ee0-6b84-4c5f-8886-bead9551a5ef",
+              "name": "label",
+              "label": null,
+              "value": "Other"
+            },
+            {
+              "id": "61f5a685-ec99-49dc-9847-f2ad92c07fb0",
+              "name": "description",
+              "label": null,
+              "value": "Other type of additional financing"
+            },
+            {
+              "id": "0eb80fce-41e5-43df-85bc-fe0b65bd70c4",
+              "name": "image",
+              "label": null,
+              "value": "21_card_questionmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "a8da3eae-30fa-4250-999f-858ac1c524d8",
+                "condition": {
+                  "id": "9306f382-3264-4367-8d0b-0ed2c98c3b62",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "e3988e73-55a4-4e4b-aedc-c8dd49286dee",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "additional_loan_type_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

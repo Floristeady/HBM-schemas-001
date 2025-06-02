@@ -1,0 +1,203 @@
+{
+  "screen_template_id": "f0a916f9-ad38-4eaa-85d3-814c4b75aa21",
+  "name": "required_pos_repairs_payer",
+  "state": "draft",
+  "title": "Who will pay for any repairs resulting from the government required reports?",
+  "label": "Repairs Payer",
+  "description": "These are for items that the government required inspections and/or reports identify.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "Required repairs must meet local government standards and be completed by the specified deadline. These are typically a Seller expense, if required and not already completed.",
+  "tip_links": {
+    "POS Repairs and Remediation": {
+      "label": "POS Repairs and Remediation",
+      "url": "https://www.homebuyme.com/insights/government-required-point-of-sale-corrective-or-remedial-actions/"
+    }
+  },
+  "small_print": "All repairs must be completed according to local building codes and regulations.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "REQUIRED-REPAIRS-PAYER-2024-001",
+    "notes": "Payment responsibility for government required repairs"
+  },
+  "components": {
+    "required_pos_repairs_payer": {
+      "id": "6e42211c-8f6d-439d-affd-06678e184456",
+      "component_type": "select_single_dropdown",
+      "name": "required_pos_repairs_payer",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will pay for required repairs",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "7f965c2c-f228-433d-8ff5-bba3db99bb49",
+          "component_type": "select_option",
+          "name": "required_pos_repairs_payer_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Seller pays for repairs",
+          "fields": [
+            {
+              "id": "0a3ea1bb-b9d0-4ff7-8533-2fbc21424f0d",
+              "name": "label",
+              "label": null,
+              "value": "Seller"
+            },
+            {
+              "id": "91ac8b2a-880a-4aa2-9482-398a711acc27",
+              "name": "description",
+              "label": null,
+              "value": "Seller pays full cost"
+            },
+            {
+              "id": "f544be4b-04d2-405e-9f0a-989d17f1dd56",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "290f1342-323a-43d4-bd74-fef2a795f3d1",
+          "component_type": "select_option",
+          "name": "required_pos_repairs_payer_buyer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Buyer pays for repairs",
+          "fields": [
+            {
+              "id": "6a862d64-e967-49a7-9c60-dfad8c5fc6f5",
+              "name": "label",
+              "label": null,
+              "value": "Buyer"
+            },
+            {
+              "id": "b2012a19-c95a-4e0f-8fed-a8c14f3a74a4",
+              "name": "description",
+              "label": null,
+              "value": "Buyer pays full cost"
+            },
+            {
+              "id": "d2a5e5c6-2bfa-4289-ace6-4a1d88411acd",
+              "name": "image",
+              "label": null,
+              "value": "26_buyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "1332523b-2c38-47a7-97dd-1f9d1893e5ca",
+          "component_type": "select_option",
+          "name": "required_pos_repairs_payer_both",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Split cost between buyer and seller",
+          "fields": [
+            {
+              "id": "0fa1557d-23cf-4046-bd2c-2cb35d0c7dc9",
+              "name": "label",
+              "label": null,
+              "value": "Both"
+            },
+            {
+              "id": "141a9fa1-ce15-45e0-a109-fc3f9aad55d2",
+              "name": "description",
+              "label": null,
+              "value": "Split cost between both parties"
+            },
+            {
+              "id": "27fea325-e015-4aef-8d16-19c48bd5204d",
+              "name": "image",
+              "label": null,
+              "value": "27_both_sellerbuyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    },
+    "required_pos_repairs_payer_split": {
+      "id": "bcedac98-6e76-4572-a485-82e0dad7c5b1",
+      "component_type": "input_text_line",
+      "name": "required_pos_repairs_payer_split",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": "parent.required_pos_repairs_payer.value === 'both'",
+      "default_value": "50/50",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe how the repair costs will be split",
+      "fields": [
+        {
+          "id": "8163364a-a780-4f05-a719-db105363a6e1",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter repair cost split details (e.g., 50/50)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

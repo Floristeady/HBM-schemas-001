@@ -1,0 +1,72 @@
+{
+  "screen_template_id": "a07bf383-6985-4f64-85ed-64613a2ed187",
+  "name": "lender_required_repairs_days",
+  "state": "draft",
+  "title": "Within how many days after acceptance will you deliver a list of lender required repairs?",
+  "label": "Repairs Days",
+  "description": "This list will be provided by your FHA or VA lender.",
+  "stage": "standard",
+  "section": "performance",
+  "scope": {
+    "first_loan_type_fha": true,
+    "first_loan_type_va": true
+  },
+  "tips": "The list of required repairs helps identify necessary property improvements required by your lender.",
+  "tip_links": {},
+  "small_print": "The repair list must be provided within the specified timeframe to maintain loan approval status.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LENDER-REPAIRS-DAYS-2024-001",
+    "notes": "Days to provide lender required repairs list"
+  },
+  "components": {
+    "lender_required_repairs_days": {
+      "id": "bfbaea27-433e-4f78-aaf9-b73659433987",
+      "component_type": "input_number",
+      "name": "lender_required_repairs_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 17,
+      "value": null,
+      "suggested": {
+        "min": 1,
+        "max": 21,
+        "hint": "The input value falls outside of suggested values",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 99
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days to deliver repair list",
+      "fields": [
+        {
+          "id": "dd65d154-bd75-4f15-8f4b-b5e5f35e7623",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (1-21)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

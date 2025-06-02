@@ -1,0 +1,74 @@
+{
+  "screen_template_id": "c4581cc6-2869-43be-9cac-0c207c932060",
+  "name": "contingency_reports_review_days",
+  "state": "draft",
+  "title": "Within how many days after Acceptance will you remove the Review of Seller Documents contingency?",
+  "label": "Reports Days",
+  "description": "Regardless of your answer, you will always have up to 5 days after receiving a document from the seller to review it.",
+  "stage": "standard",
+  "section": "contingencies",
+  "scope": {
+    "contingency_reports_review": true,
+    "contingency_reports_review_exceptions_govt": true,
+    "contingency_reports_review_exceptions_state": true,
+    "contingency_reports_review_exceptions_other": true
+  },
+  "tips": "Consider the time needed to thoroughly review all documents. The typical number of days for review is 17.",
+  "tip_links": {},
+  "small_print": "Regardless of your answer, you will always have either up to the number of days (after offer acceptance) you specify here or up to 5 days after receiving a document from the seller to review it, whichever is greater.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "REPORTS-REVIEW-DAYS-2024-001",
+    "notes": "Days to remove reports review contingency"
+  },
+  "components": {
+    "contingency_reports_review_days": {
+      "id": "388dd3ed-bdd3-42f9-b00f-3b210589e912",
+      "component_type": "input_number",
+      "name": "contingency_reports_review_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 17,
+      "value": null,
+      "suggested": {
+        "min": 10,
+        "max": 21,
+        "hint": "The standard is 17 days. Anthing less than 10 days or more than 21 days is not recommended.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "min_value": 1,
+        "max_value": 99,
+        "required": true
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter number of days",
+      "fields": [
+        {
+          "id": "eb8c0fe7-cd19-4fda-9398-e185e5b0da92",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter days (e.g. 17)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

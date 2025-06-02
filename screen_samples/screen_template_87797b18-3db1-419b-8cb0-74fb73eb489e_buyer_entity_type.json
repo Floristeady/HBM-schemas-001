@@ -1,0 +1,230 @@
+{
+  "screen_template_id": "87797b18-3db1-419b-8cb0-74fb73eb489e",
+  "name": "buyer_entity_type",
+  "state": "draft",
+  "title": "What type of entity will the Authorized Representative(s) be signing for?",
+  "label": "Entity Type",
+  "description": "If Other, you will need to describe on the following screen.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer_entity": true
+  },
+  "tips": "Different entity types may require different documentation to prove authorization.",
+  "tip_links": {},
+  "small_print": "Entity type must match the authorization documentation provided.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ENTITY-TYPE-2024-001",
+    "notes": "Selection of entity type"
+  },
+  "components": {
+    "buyer_entity_type": {
+      "id": "a682093b-6ad7-4722-af00-a208a55a4431",
+      "component_type": "select_single_dropdown",
+      "name": "buyer_entity_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select the type of entity",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "3a110a34-395a-409e-9edf-28ab53b6b314",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_trust",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "Trust entity",
+          "fields": [
+            {
+              "id": "afac78b1-ae1d-4ed1-bbcb-a0f749f2ae8b",
+              "name": "label",
+              "label": null,
+              "value": "Trust"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "f5358144-b8a9-482d-8416-1fad9c879909",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_corporation",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Corporation entity",
+          "fields": [
+            {
+              "id": "1cb04f04-7f4f-437a-a5a9-07f0a29cddb3",
+              "name": "label",
+              "label": null,
+              "value": "Corporation"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "470a71c3-4b91-4de5-9a55-083969b91e4d",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_llc",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "LLC entity",
+          "fields": [
+            {
+              "id": "30c1d17b-1512-4a87-b20b-53520f24e830",
+              "name": "label",
+              "label": null,
+              "value": "LLC"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "d0a3a426-0f97-4646-aece-3623187c34d5",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_partnership",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Partnership entity",
+          "fields": [
+            {
+              "id": "625e1f96-420e-4bb7-8fae-b6e383571b35",
+              "name": "label",
+              "label": null,
+              "value": "Partnership"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "60a30966-2f19-44f0-a7ab-8ef86681bbbb",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_probate",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Probate estate",
+          "fields": [
+            {
+              "id": "7dd41768-223f-4eca-b315-bf1169f63908",
+              "name": "label",
+              "label": null,
+              "value": "Probate Estate"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "a6f43dbc-f503-4bd2-8ebf-4f36d8dd5236",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_poa",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Power of Attorney",
+          "fields": [
+            {
+              "id": "2d5e81d4-b92c-4243-b25c-db495ff1cef9",
+              "name": "label",
+              "label": null,
+              "value": "Power of Attorney"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "2fcdb91b-bd8d-4dd8-b08c-0c316da2d9d6",
+          "component_type": "select_option",
+          "name": "buyer_entity_type_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Other entity type",
+          "fields": [
+            {
+              "id": "fe981047-c6af-4233-a0f2-25ff8df60519",
+              "name": "label",
+              "label": null,
+              "value": "Other"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "91552e1b-1d6b-4044-893b-d7358c99f217",
+                "condition": {
+                  "id": "4740dca8-9e1a-4013-8a50-eab18dee6371",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "0d6fcea4-230f-427d-8421-1f57cf626d40",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_entity_type_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

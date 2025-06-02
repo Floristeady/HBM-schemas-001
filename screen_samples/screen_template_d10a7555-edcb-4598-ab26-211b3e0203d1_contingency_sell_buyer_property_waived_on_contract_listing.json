@@ -1,0 +1,226 @@
+{
+  "screen_template_id": "d10a7555-edcb-4598-ab26-211b3e0203d1",
+  "name": "contingency_sell_buyer_property_waived_on_contract_listing",
+  "state": "draft",
+  "title": "Have you already listed your property for sale?",
+  "label": "Property Listing",
+  "description": "It's important to have your property listed as soon as possible.",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_and_coe": true,
+    "contingency_sell_buyer_property_waived_on_contract": true
+  },
+  "tips": "Having your property already listed shows commitment and can make your offer more attractive to the seller.",
+  "tip_links": {},
+  "small_print": "The further along you are in this process the more at ease the Seller's will be as far as how realistic your offer is, ultimately making them more likely to accept.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PROPERTY-LISTING-STATUS-2024-001",
+    "notes": "Current listing status of buyer's property"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_contract_listing": {
+      "id": "7a490cb6-70e0-4f0a-bd88-73b812f5d215",
+      "component_type": "select_single_cards",
+      "name": "contingency_sell_buyer_property_waived_on_contract_listing",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select your property's current listing status",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "30a2ff30-90a4-4481-adc4-4ce8fbc6551f",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_contract_listing_broker",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Listed with Real Estate Broker",
+          "fields": [
+            {
+              "id": "15b73ca6-0911-4c66-8962-bd23459381c7",
+              "name": "label",
+              "label": null,
+              "value": "Yes, through a Real Estate Broker"
+            },
+            {
+              "id": "6c5954f7-2119-488e-afbf-e5ee3f789dc3",
+              "name": "description",
+              "label": null,
+              "value": "Property is listed with a licensed real estate broker"
+            },
+            {
+              "id": "dad0987a-8a56-41d6-ba0e-c43005921721",
+              "name": "image",
+              "label": null,
+              "value": "10_agent.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "ff0f79ed-a492-44ad-a4a7-b1cc7f2f0dde",
+                "condition": {
+                  "id": "3fc01a8d-f95b-453f-aa76-aaa6a11cf294",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "9d9eaf87-7bf7-4264-a7bb-2e9a8e09501f",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_contract_listing_broker",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c96e31bf-1329-410d-b2db-c7ee175d26f9",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_contract_listing_fsbo",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Listed For Sale By Owner",
+          "fields": [
+            {
+              "id": "028b8843-8320-4fce-a499-aacf95bd8b83",
+              "name": "label",
+              "label": null,
+              "value": "Yes, For Sale By Owner (FSBO)"
+            },
+            {
+              "id": "8f7a95b8-cf6b-4297-898a-f6abffa3d1d3",
+              "name": "description",
+              "label": null,
+              "value": "Property is listed for sale by owner"
+            },
+            {
+              "id": "353bea50-d3ad-458e-9682-a40d8be205dc",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "aad71b6f-19d3-4486-b9d0-25a5b4dc057f",
+                "condition": {
+                  "id": "7cd97825-abdc-480d-b3c2-4b26c98df79b",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "c2726101-3ad5-4473-9dda-410f9dd9132b",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_contract_listing_fsbo",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0a6b9109-5ed3-498c-a5f4-7c73685de83b",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_contract_listing_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Not listed yet",
+          "fields": [
+            {
+              "id": "3e110c75-e64b-413b-9fb2-0b59a970c74d",
+              "name": "label",
+              "label": null,
+              "value": "No, I haven't listed it yet"
+            },
+            {
+              "id": "27bee5ba-df6a-48fb-b372-a095c8e1e15b",
+              "name": "description",
+              "label": null,
+              "value": "Property has not been listed for sale"
+            },
+            {
+              "id": "053bb0a5-1ff2-4f22-8380-20265e90be81",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "63d7563a-dd3b-4a5a-b715-4457a409d9e1",
+                "condition": {
+                  "id": "83b4041a-aca3-497c-8ca7-9b3de451e824",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ea8e96e7-02c0-40ab-b731-8e66a084da18",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_contract_listing_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

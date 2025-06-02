@@ -1,0 +1,64 @@
+{
+  "screen_template_id": "b0dd2167-b46e-4909-9c37-ca1528bea129",
+  "name": "buyer3_email_no_entity",
+  "state": "draft",
+  "title": "Third Signer's Email Address",
+  "label": "Third Signer Email",
+  "description": "Please enter the email address where the offer should be sent for the third signer's signature",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer3_no_entity": true
+  },
+  "tips": "Use an email address that you check regularly as this will be used for important document delivery and communications.",
+  "tip_links": {},
+  "small_print": "All official documents and notifications will be sent to this email address.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER3-EMAIL-2024-001",
+    "notes": "Third signer's email address"
+  },
+  "components": {
+    "buyer3_email_no_entity": {
+      "id": "4949ee8f-8cec-4abe-9bba-dbba3c881059",
+      "component_type": "input_email",
+      "name": "buyer3_email_no_entity",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "email",
+        "required": true,
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      },
+      "formatting": {
+        "type": "email"
+      },
+      "tooltip": "Enter your email address",
+      "fields": [
+        {
+          "id": "da2102a4-7954-4080-b8e7-e715c7dad2a6",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter email address",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "screen_template_id": "fa37d276-abc0-4fe3-b840-909e1c0b26d2",
+  "name": "first_loan_type",
+  "state": "draft",
+  "title": "What kind of loan will you have?",
+  "label": "Loan Type",
+  "description": "Will it be Conventional, FHA, VA, or another type?",
+  "stage": "basics",
+  "section": "funds_and_financing",
+  "scope": {
+    "funds_type_loan": true
+  },
+  "tips": "Most individuals use Conventional loans, but FHA (Federal Housing Administration) and VA (Veterans Affairs) loans are more specialized and require additional diligence. Ask your lender about the right product for you.",
+  "tip_links": {
+    "Loan Types Explained": {
+      "label": "Loan Types Explained",
+      "url": "https://www.homebuyme.com/insights/loan-types-explained-conventional-fha-va-seller-financing-and-how-they-impact-your-offer/"
+    }
+  },
+  "small_print": "FHA and VA loans will require that you deliver to the seller a list of any lender required repairs or conditions that you want the seller to pay for or otherwise correct or a statement that there are no lender requirements. Keep in mind that the seller has no obligation to pay or satisfy any or all lender requirements unless agreed to in writing.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LOAN-TYPE-2024-001",
+    "notes": "Critical for determining loan-specific screens and requirements"
+  },
+  "components": {
+    "first_loan_type": {
+      "id": "79565085-434c-4fa8-8b6e-9705a8b934ce",
+      "component_type": "select_single_cards",
+      "name": "first_loan_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select your loan type",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "159202dc-6c44-443e-829a-c2246b44af13",
+          "component_type": "select_card",
+          "name": "first_loan_type_conventional",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Conventional loan",
+          "fields": [
+            {
+              "id": "f050d526-6b8d-488f-92bc-81dac2a06c6a",
+              "name": "label",
+              "label": null,
+              "value": "Conventional"
+            },
+            {
+              "id": "4f2b3655-ffcd-4f87-a045-4f216c7b0640",
+              "name": "description",
+              "label": null,
+              "value": "Traditional mortgage loan"
+            },
+            {
+              "id": "d5c97511-ba9f-458c-8141-1f8cafe720ba",
+              "name": "image",
+              "label": null,
+              "value": "15_house_dollarsign.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "bf8252db-405f-404c-aea5-a5d56e999e39",
+          "component_type": "select_card",
+          "name": "first_loan_type_fha",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "FHA loan",
+          "fields": [
+            {
+              "id": "f324ad61-32bb-4010-b437-22cf479d9a66",
+              "name": "label",
+              "label": null,
+              "value": "FHA"
+            },
+            {
+              "id": "03930b56-6ab4-4195-bd11-297ef4b491b4",
+              "name": "description",
+              "label": null,
+              "value": "Federal Housing Administration loan"
+            },
+            {
+              "id": "f81b1ce3-d323-4822-a142-b806f117f36e",
+              "name": "image",
+              "label": null,
+              "value": "16_house_FHA.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "e266f509-0fee-4714-9170-561a12095862",
+                "condition": {
+                  "id": "a2d17973-2176-4796-b2f0-9497d4041831",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "b43583ce-008d-476d-a816-a4c15d98805e",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "first_loan_type_fha",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dc5758dd-00d9-49ea-8eb3-d2365ad77ac9",
+          "component_type": "select_card",
+          "name": "first_loan_type_va",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "VA loan",
+          "fields": [
+            {
+              "id": "d1d1cf02-ba83-48d3-8110-82d335545de5",
+              "name": "label",
+              "label": null,
+              "value": "VA"
+            },
+            {
+              "id": "942238cc-53c7-4951-9aee-06c4a2187b92",
+              "name": "description",
+              "label": null,
+              "value": "Veterans Affairs loan"
+            },
+            {
+              "id": "85ea591c-489e-41b9-8f5c-483e47c007b2",
+              "name": "image",
+              "label": null,
+              "value": "17_house_star.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "8a1e0d74-5c59-4c56-a15f-a08681fdebb6",
+                "condition": {
+                  "id": "3a2e99f1-9734-4292-9bff-bda65a199693",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "874362d8-e2ab-4c52-965e-32d1eed3403c",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "first_loan_type_va",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0f87a694-aed3-4d44-968b-392590016d1b",
+          "component_type": "select_card",
+          "name": "first_loan_type_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Other loan type",
+          "fields": [
+            {
+              "id": "f414f5bb-5221-4fdf-9c24-3ae569fcb074",
+              "name": "label",
+              "label": null,
+              "value": "Other"
+            },
+            {
+              "id": "a002c84e-6199-4c8e-9399-cb8f2805031f",
+              "name": "description",
+              "label": null,
+              "value": "Different type of loan"
+            },
+            {
+              "id": "4c2fbae0-1712-49d1-aed7-e2e81d51774d",
+              "name": "image",
+              "label": null,
+              "value": "18_house_questionmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "2d8bd473-05c8-4288-891f-c19df325e633",
+                "condition": {
+                  "id": "808f147a-faa3-424b-a90a-f3cd5d0c9c3a",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "9c623a38-a93a-414a-9ee0-a22fb717ad2e",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "first_loan_type_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

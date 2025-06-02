@@ -1,0 +1,263 @@
+{
+  "screen_template_id": "69cd34fc-8172-49ed-b9ea-227e02450d33",
+  "name": "contingency_property_investigation_parts_waived",
+  "state": "draft",
+  "title": "What parts of the property investigation contingency would you like to waive?",
+  "label": "Investigation",
+  "description": "Be sure that you understand all potential issues involved in waiving investigation contingencies.",
+  "stage": "competitive",
+  "section": "contingencies",
+  "scope": {
+    "contingency_property_investigation_no": true
+  },
+  "tips": "Consider carefully which investigation rights you're willing to waive. Some aspects may be more critical than others.",
+  "tip_links": {},
+  "small_print": "Each waived component reduces your protection. Should the Buyer waive this contingency, they are accepting the property 'as-is' with no ability to negotiate should a system fail or something material be wrong.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "INVESTIGATION-PARTS-WAIVED-2024-001",
+    "notes": "Selection of specific investigation components to waive"
+  },
+  "components": {
+    "contingency_property_investigation_parts_waived": {
+      "id": "694176ea-2948-4c95-880b-f3592f63e12b",
+      "component_type": "select_single_cards",
+      "name": "contingency_property_investigation_parts_waived",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select the parts of the investigation you want to waive",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "16bc1fc6-6a90-46d8-9273-4622053eca85",
+          "component_type": "select_card",
+          "name": "contingency_property_investigation_fully_waived",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all property investigation rights",
+          "fields": [
+            {
+              "id": "006eb94c-d912-4357-82d8-3ed104f43b5e",
+              "name": "label",
+              "label": null,
+              "value": "Fully Waived"
+            },
+            {
+              "id": "05c06858-bf14-4a66-a896-ec4668c397c3",
+              "name": "description",
+              "label": null,
+              "value": "Waive all property investigation rights"
+            },
+            {
+              "id": "0b198a97-3667-4f14-92a1-01c4a4e50e2c",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "81485302-4503-4e8f-b8f7-560f1e505c4d",
+          "component_type": "select_card",
+          "name": "contingency_property_investigation_physical_waived",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive physical inspection rights",
+          "fields": [
+            {
+              "id": "a024e765-4f3d-4be8-9892-75823c93dba4",
+              "name": "label",
+              "label": null,
+              "value": "Waive only the physical parts of the property investigation"
+            },
+            {
+              "id": "f14d885b-2f72-4821-b2bb-5e54db587833",
+              "name": "description",
+              "label": null,
+              "value": "Waive inspections of physical components"
+            },
+            {
+              "id": "f6a57a23-af9f-4952-9f5e-dfef81cdb997",
+              "name": "image",
+              "label": null,
+              "value": "42_house_small.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "7d9fec07-534e-4087-a617-1bf3176a58d3",
+                "condition": {
+                  "id": "9e1a44e8-c913-4bbd-a137-9ee0c3162f80",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "77732bb4-32b9-4a6a-9a28-0dccd505b394",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_property_investigation_physical_waived",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b236ebf8-6e3f-49b5-afdf-e688c8a0a1ac",
+          "component_type": "select_card",
+          "name": "contingency_property_investigation_non_physical_waived",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive documentation review rights",
+          "fields": [
+            {
+              "id": "582dcb7d-f4d9-450f-abb9-5a2853181f9e",
+              "name": "label",
+              "label": null,
+              "value": "Waive only the non-physical parts of the property investigation"
+            },
+            {
+              "id": "8cd2b1e7-edef-4c38-84f0-54e828fd31c2",
+              "name": "description",
+              "label": null,
+              "value": "Waive documentation and records review"
+            },
+            {
+              "id": "2354ae93-f9ef-4490-bc63-fb6d4c17527a",
+              "name": "image",
+              "label": null,
+              "value": "24_doc_with_seal.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "0586e270-542f-42a8-9c9e-b91b54e7079b",
+                "condition": {
+                  "id": "ed912b2c-81b4-4602-be1c-75258e24c535",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "df4d6187-9867-47fa-bcf4-ecd37bde635d",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_property_investigation_non_physical_waived",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8006ba92-e2ca-4f0a-9d47-234b65107779",
+          "component_type": "select_card",
+          "name": "contingency_property_investigation_exceptions_waived",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all except specified items",
+          "fields": [
+            {
+              "id": "40af3c19-80cb-44d5-8059-0549b56e9ae7",
+              "name": "label",
+              "label": null,
+              "value": "Waive all parts but ones that I exclude"
+            },
+            {
+              "id": "7d5b85a2-743a-4b57-9ff3-300e1f846ab4",
+              "name": "description",
+              "label": null,
+              "value": "Specify exceptions to keep"
+            },
+            {
+              "id": "f2fde381-b32d-400a-9e19-e1d4802c95d7",
+              "name": "image",
+              "label": null,
+              "value": "18_house_questionmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "3a8ae6bf-d2e8-400a-af8a-4605667579d0",
+                "condition": {
+                  "id": "49203912-551c-44e1-9996-c316a2ab70f8",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "49a71ef3-3641-4aa3-9798-013a610dd295",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_property_investigation_exceptions_waived",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "screen_template_id": "6ae3698a-618d-4dc7-8b84-24ec16124298",
+  "name": "buyer3_type",
+  "state": "draft",
+  "title": "Is the third buyer signing personally or as an Authorized Representative of the entity?",
+  "label": "Third Buyer Type",
+  "description": "If signing for the entity, this person must be an Authorized Representative.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer3_entity": true
+  },
+  "tips": "Choose 'Signing for an Entity' if you're representing a trust, corporation, or other legal entity.",
+  "tip_links": {},
+  "small_print": "The selection determines the type of signature and documentation required.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER3-TYPE-2024-001",
+    "notes": "Third buyer signing type selection"
+  },
+  "components": {
+    "buyer3_type": {
+      "id": "df8104d7-9539-4b39-b433-d2688633b070",
+      "component_type": "select_single_cards",
+      "name": "buyer3_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select how the third buyer will sign",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "35aaee6b-c9cb-4b5e-a4ac-15dc455a5714",
+          "component_type": "select_card",
+          "name": "buyer3_type_person",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Signing as an individual",
+          "fields": [
+            {
+              "id": "321919c2-6165-41a2-b651-83ebdf83b0b3",
+              "name": "label",
+              "label": null,
+              "value": "Signing Personally"
+            },
+            {
+              "id": "54a613d3-67b9-47c4-87d6-4771b93379f0",
+              "name": "description",
+              "label": null,
+              "value": "Sign as an individual person"
+            },
+            {
+              "id": "b6f1459d-4daf-47cd-81df-8ec951de964c",
+              "name": "image",
+              "label": null,
+              "value": "37_representative.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "fc278f54-91ff-4d9b-8851-f257f338160f",
+                "condition": {
+                  "id": "74e3b16e-43d8-429e-8fd0-c6f24962b688",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "b3b07d81-34d1-4a15-9f4d-85b6b14555ec",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer3_type_person",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "be81b2fe-2b92-4665-bb4b-df614106a95f",
+          "component_type": "select_card",
+          "name": "buyer3_type_entity",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Signing for an entity",
+          "fields": [
+            {
+              "id": "53c43eff-8115-43dd-bf84-f89dd301fc53",
+              "name": "label",
+              "label": null,
+              "value": "Signing for an Entity"
+            },
+            {
+              "id": "55e7b59f-241b-4d9d-a7cd-3b036053955e",
+              "name": "description",
+              "label": null,
+              "value": "Sign as an authorized representative"
+            },
+            {
+              "id": "658bc331-bb65-4b37-8c4c-35827841e26f",
+              "name": "image",
+              "label": null,
+              "value": "38_entity.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "4674d7be-4159-4aa8-a026-1dab0f6e22f4",
+                "condition": {
+                  "id": "d4a41a16-c622-4431-800c-5712e47db27f",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "899b1d7a-e913-438c-92d2-8d20e21223be",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer3_type_entity",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

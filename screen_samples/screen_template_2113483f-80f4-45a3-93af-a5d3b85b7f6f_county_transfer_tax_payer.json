@@ -1,0 +1,203 @@
+{
+  "screen_template_id": "2113483f-80f4-45a3-93af-a5d3b85b7f6f",
+  "name": "county_transfer_tax_payer",
+  "state": "draft",
+  "title": "Who will pay for the county transfer tax and fees?",
+  "label": "Tax Payer",
+  "description": "Select who will be responsible for county transfer taxes and fees.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "County transfer taxes are typically charged when property ownership changes and are customarily paid by the seller unless otherwise noted or negotiated.",
+  "tip_links": {
+    "Understanding Transfer Taxes": {
+      "label": "Understanding Transfer Taxes",
+      "url": "https://www.homebuyme.com/insights/county-transfer-tax-fees-what-you-need-to-know/"
+    }
+  },
+  "small_print": "Transfer tax rates vary by county and property value.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "COUNTY-TRANSFER-TAX-2024-001",
+    "notes": "Payment responsibility for county transfer taxes"
+  },
+  "components": {
+    "county_transfer_tax_payer": {
+      "id": "b877ffec-328e-46ca-983c-027434ee3fb8",
+      "component_type": "select_single_dropdown",
+      "name": "county_transfer_tax_payer",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will pay the transfer taxes",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "cedc2356-16c7-49ec-ac09-7cecbd15a2de",
+          "component_type": "select_option",
+          "name": "county_transfer_tax_payer_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Seller pays transfer taxes",
+          "fields": [
+            {
+              "id": "396ca5cd-b0de-4c25-9693-e8af9c0b3060",
+              "name": "label",
+              "label": null,
+              "value": "Seller"
+            },
+            {
+              "id": "a52487a4-97d0-45e8-9ee3-3c06d01001b1",
+              "name": "description",
+              "label": null,
+              "value": "Seller pays full cost"
+            },
+            {
+              "id": "d81e38b5-d76a-4408-83a5-a35654bd323e",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "8e22f7d5-23c9-4a22-9dd9-bfdb8e1188d4",
+          "component_type": "select_option",
+          "name": "county_transfer_tax_payer_buyer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Buyer pays transfer taxes",
+          "fields": [
+            {
+              "id": "5f3d8001-ac5f-45e0-8d71-7dfae5f439d3",
+              "name": "label",
+              "label": null,
+              "value": "Buyer"
+            },
+            {
+              "id": "517e9a81-f71d-419b-8900-6a42d14d6bba",
+              "name": "description",
+              "label": null,
+              "value": "Buyer pays full cost"
+            },
+            {
+              "id": "68e3ed18-6117-45e2-ae7e-2240d7206675",
+              "name": "image",
+              "label": null,
+              "value": "26_buyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "ba69bddf-3978-4f9d-bacd-58464095f5b2",
+          "component_type": "select_option",
+          "name": "county_transfer_tax_payer_both",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Split cost between buyer and seller",
+          "fields": [
+            {
+              "id": "ff5f3b82-36bd-46e6-871c-a67ce8468040",
+              "name": "label",
+              "label": null,
+              "value": "Both"
+            },
+            {
+              "id": "acd68b45-4d5e-4573-b17c-d85f5c09dc40",
+              "name": "description",
+              "label": null,
+              "value": "Split cost between both parties"
+            },
+            {
+              "id": "60e74caa-8f62-4f00-b06c-fcc8584fbf70",
+              "name": "image",
+              "label": null,
+              "value": "27_both_sellerbuyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    },
+    "county_transfer_tax_payer_split": {
+      "id": "7bb8fa0b-4b31-4458-95a1-4f8a0e665c80",
+      "component_type": "input_text_line",
+      "name": "county_transfer_tax_payer_split",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": "parent.county_transfer_tax_payer.value === 'both'",
+      "default_value": "50/50",
+      "value": "50/50",
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe how the transfer taxes will be split",
+      "fields": [
+        {
+          "id": "91e59134-b5b7-4b78-91d5-36e292bb15b6",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter the cost split arrangement (e.g., 50/50)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "screen_template_id": "fcbaf194-1427-4e03-98b6-86ae1911fd4c",
+  "name": "all_cash_verification_uploader",
+  "state": "draft",
+  "title": "Upload verification for your All Cash purchase",
+  "label": "Uploader",
+  "description": "If you don't have the documents ready, you can skip for now.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "all_cash_verification_docs": true
+  },
+  "tips": "Common verification documents include bank statements, investment account statements, or a letter from your financial institution.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ALL-CASH-VERIFY-UPLOAD-2024-001",
+    "notes": "Document upload for all cash verification"
+  },
+  "components": {
+    "all_cash_verification_uploader": {
+      "id": "4e00ba6b-864d-4178-ba81-61bb2116d9b4",
+      "component_type": "pick_file",
+      "name": "all_cash_verification_uploader",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "Since you chose to provide proof of funds as part of your offer, uploading will be required to complete your offer.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true,
+        "max_files": 5,
+        "allowed_file_types": [
+          "pdf",
+          "jpg",
+          "jpeg",
+          "png",
+          "doc",
+          "docx"
+        ]
+      },
+      "formatting": null,
+      "tooltip": "Upload your proof of funds documents",
+      "fields": [],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "screen_template_id": "fcc93f0e-f44a-4ee8-b03c-e60b2b14a769",
+  "name": "entity_buyer_type",
+  "state": "draft",
+  "title": "What type of entity will be purchasing the Property as an investment?",
+  "label": "Loan Type",
+  "description": "Will the buyer be a Corporation, a Partnership, an LLC, or some other type of entity.",
+  "stage": "basics",
+  "section": "funds_and_financing",
+  "scope": {
+    "entity_buyer_type_individuals_no": true
+  },
+  "tips": "Different types of buying entities have different requirements and benefits.",
+  "tip_links": {},
+  "small_print": "Your buyer entity type may affect required down payment, credit score requirements, and other terms.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "entity_buyer_type-2024-001",
+    "notes": "Critical for determining investement buyer screens and requirements"
+  },
+  "components": {
+    "entity_buyer_type": {
+      "id": "ff38a9a3-e5f9-47a9-a708-fb5f2e630aca",
+      "component_type": "select_single_cards",
+      "name": "entity_buyer_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select your entity type",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "c2335aae-54a9-449e-9bc4-ab95ea71fbaf",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_corporation",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Corporate Entity",
+          "fields": [
+            {
+              "id": "8f0333f8-5830-4431-97ad-2638f3b8f0e7",
+              "name": "label",
+              "label": null,
+              "value": "Corporation"
+            },
+            {
+              "id": "4231c2b9-8472-4fd4-ba7b-24e36b0dea46",
+              "name": "description",
+              "label": null,
+              "value": "Buying as a Corporation"
+            },
+            {
+              "id": "a5afb87b-06cb-4c24-90bc-6a9c959ab0fb",
+              "name": "image",
+              "label": null,
+              "value": "14_building.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "6e69b427-4d43-415e-9ab0-6f036c58f587",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_llc",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "LLC",
+          "fields": [
+            {
+              "id": "fa4c009d-978a-43b9-9c8f-4c0a512933d9",
+              "name": "label",
+              "label": null,
+              "value": "LLC"
+            },
+            {
+              "id": "29335bd5-68a5-4cc5-99ab-7adacb204bb9",
+              "name": "description",
+              "label": null,
+              "value": "Buying as a Limited Liability Company"
+            },
+            {
+              "id": "0591446c-4e45-453a-8238-91b2521935f6",
+              "name": "image",
+              "label": null,
+              "value": "5_condo.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "784d4656-9501-4972-9b05-a14048dabef2",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_partnership",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Partnership",
+          "fields": [
+            {
+              "id": "b1d77055-ee75-4bc9-99d2-edb6e694636a",
+              "name": "label",
+              "label": null,
+              "value": "Partnership"
+            },
+            {
+              "id": "ddaa65c7-8853-4f30-9e8f-7a51b85a3aa5",
+              "name": "description",
+              "label": null,
+              "value": "Buying as a Partnership"
+            },
+            {
+              "id": "94ae4c99-8cba-4c03-8397-146caaa7928a",
+              "name": "image",
+              "label": null,
+              "value": "22_handshake.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "f110a268-bb2e-422d-8e2b-49aa2f7cf057",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Other buyer type",
+          "fields": [
+            {
+              "id": "3e1cdc59-3305-43ec-b041-adcd026283c4",
+              "name": "label",
+              "label": null,
+              "value": "Other"
+            },
+            {
+              "id": "59ebe52e-56a7-4d4d-ac7b-b6681517ce02",
+              "name": "description",
+              "label": null,
+              "value": "Different type of buyer entity or organization"
+            },
+            {
+              "id": "75da52c5-1e55-4cf7-a82e-da946e4c46d4",
+              "name": "image",
+              "label": null,
+              "value": "13_store.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "17326607-e368-4aa2-9a1c-e25edb209641",
+                "condition": {
+                  "id": "27cc801e-5890-4eb2-ac97-e31e22c73a8d",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "238ba0ce-c111-44c3-9db1-52f52d20d80d",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "entity_buyer_type_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

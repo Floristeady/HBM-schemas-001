@@ -1,0 +1,70 @@
+{
+  "screen_template_id": "22eea5b0-ea47-468d-92f7-723687a57ad7",
+  "name": "sign_escrow_holder_provisions_days",
+  "state": "draft",
+  "title": "Within how many days after Escrow Holder Provisions and Instructions are delivered will they be signed and returned?",
+  "label": "Escrow Sign Days",
+  "description": "This can be no more than 5 days.",
+  "stage": "standard",
+  "section": "documents",
+  "scope": {},
+  "tips": "Prompt signing and return of escrow instructions helps keep the transaction on schedule. Typical turnaround time is within 5 days.",
+  "tip_links": {},
+  "small_print": "These documents are usually pretty straight foreward and the default days for review should be enough time. However, feel free to ask for more time, if you feel that you will need it or would like to engage a professional to read through all documents.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ESCROW-SIGN-DAYS-2024-001",
+    "notes": "Days to return signed escrow instructions"
+  },
+  "components": {
+    "sign_escrow_holder_provisions_days": {
+      "id": "933b7120-83c6-48cd-8ac0-40fde6986e1c",
+      "component_type": "input_number",
+      "name": "sign_escrow_holder_provisions_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": 5,
+      "suggested": {
+        "min": 1,
+        "max": 5,
+        "hint": "Taking more than 5 days to sign and return escrow instructions can delay the transaction.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 99
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days to sign and return (max 5)",
+      "fields": [
+        {
+          "id": "da6cb4a8-6bc4-4fa5-ba37-a74b14338379",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (1-5)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

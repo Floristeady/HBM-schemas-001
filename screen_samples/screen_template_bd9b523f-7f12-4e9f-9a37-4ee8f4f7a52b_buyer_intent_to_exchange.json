@@ -1,0 +1,148 @@
+{
+  "screen_template_id": "bd9b523f-7f12-4e9f-9a37-4ee8f4f7a52b",
+  "name": "buyer_intent_to_exchange",
+  "state": "draft",
+  "title": "Will you be buying this property as part of a 1031 exchange?",
+  "label": "Buyer Exchange",
+  "description": "The purchased property must be held for investment or business use to qualify.",
+  "stage": "advanced",
+  "section": "intent_to_exchange",
+  "scope": {},
+  "tips": "A 1031 exchange allows you to defer capital gains taxes by reinvesting proceeds from the sale of a business or investment property into a similar property. Consider consulting with a qualified intermediary or tax advisor before proceeding.",
+  "tip_links": {
+    "1031 Exchange Basics": {
+      "label": "Understanding 1031 Exchanges",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips"
+    }
+  },
+  "small_print": "The 1031 exchange must meet specific IRS requirements and timelines. Failure to comply may result in immediate tax liability. This selection will be included in your purchase agreement.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER-1031-EXCHANGE-2024-001",
+    "notes": "Buyer's intention regarding 1031 exchange for property purchase"
+  },
+  "components": {
+    "addendum_buyer_intent_to_exchange": {
+      "id": "cc0ea4d7-424f-4817-87a9-d489f4164f34",
+      "component_type": "select_single_cards",
+      "name": "addendum_buyer_intent_to_exchange",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": false,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether this purchase will be part of a 1031 exchange",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "0a1093df-9e9a-403e-b15e-32a9f0562e50",
+          "component_type": "select_card",
+          "name": "addendum_buyer_intent_to_exchange",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Yes, this is part of a 1031 exchange",
+          "fields": [
+            {
+              "id": "0663f5ac-c53c-4102-a7ab-b4ff9c735e8d",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "fb6c48a4-cde7-4868-8704-28028e26682a",
+              "name": "description",
+              "label": null,
+              "value": "This purchase will be part of a 1031 exchange"
+            },
+            {
+              "id": "1e867430-b2c2-45fc-a172-e6831f64106b",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "5dedbdbb-9e59-4f7e-9349-10211f475d5c",
+                "condition": {
+                  "id": "74740d1c-8758-4f9e-acd8-58f466345d92",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ca05b61e-1aad-4919-b222-6a20fdb44904",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "addendum_buyer_intent_to_exchange",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f129081e-7087-43c3-ba29-a23dc339f4cf",
+          "component_type": "select_card",
+          "name": "addendum_buyer_no_exchange",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No, this is not part of a 1031 exchange",
+          "fields": [
+            {
+              "id": "ba2ecc8b-9b30-4a71-9da9-a4c721359b58",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "26af8554-ec6f-4a7b-b629-36a23d266d7e",
+              "name": "description",
+              "label": null,
+              "value": "This purchase is not part of a 1031 exchange"
+            },
+            {
+              "id": "6c7fe55e-ac0e-48ad-9927-4558336d32a7",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

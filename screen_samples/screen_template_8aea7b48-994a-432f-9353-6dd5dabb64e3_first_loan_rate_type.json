@@ -1,0 +1,171 @@
+{
+  "screen_template_id": "8aea7b48-994a-432f-9353-6dd5dabb64e3",
+  "name": "first_loan_rate_type",
+  "state": "draft",
+  "title": "Is your initial loan interest rate fixed or adjustable?",
+  "label": "Rate Type",
+  "description": "Tell us if your interest rate stays the same or can change over time.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {
+    "funds_type_loan": true
+  },
+  "tips": "Fixed rates offer stability with the same payment throughout your loan. Adjustable rates may start lower but can change periodically.",
+  "tip_links": {
+    "Fixed vs Adjustable Rates": {
+      "label": "Fixed vs Adjustable Rates",
+      "url": "https://www.homebuyme.com/insights/understanding-the-types-of-mortgages-fixed-rate-adjustable-rate-and-loan-terms-explained/"
+    }
+  },
+  "small_print": "Your rate type selection should match your loan estimate or pre-approval letter. This choice impacts certain loan-related contingencies in your offer.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LOAN-TYPE-2024-001",
+    "notes": "Rate type affects downstream disclosures and contingencies"
+  },
+  "components": {
+    "first_loan_rate_type": {
+      "id": "415c7bc3-7802-4dae-926b-e2e662898ea6",
+      "component_type": "select_single_cards",
+      "name": "first_loan_rate_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Choose your loan's interest rate type",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "3a3c6a45-b81a-4a62-b79d-7d4f06c02f98",
+          "component_type": "select_card",
+          "name": "first_loan_fixed",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if your rate stays the same",
+          "fields": [
+            {
+              "id": "88cb9774-a2da-4c09-aacc-7ca030669eaa",
+              "name": "label",
+              "label": null,
+              "value": "Fixed Rate"
+            },
+            {
+              "id": "57e6eac0-917d-4039-af64-62dc1162372c",
+              "name": "description",
+              "label": null,
+              "value": "My interest rate stays the same"
+            },
+            {
+              "id": "5dea110b-20b1-470f-b4a5-b0d7425622b8",
+              "name": "image",
+              "label": null,
+              "value": "8_padlock.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "bbccc4e6-aa92-4ddb-8f8e-ef681023f102",
+                "condition": {
+                  "id": "d8b2e59b-6944-449c-8038-270c4f767080",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "fca4d156-281c-4aa5-a184-3f4874601c79",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "first_loan_fixed",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dd144f6e-ce0c-4a5c-8e00-6f7591d5d46a",
+          "component_type": "select_card",
+          "name": "first_loan_adj",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select if your rate can change",
+          "fields": [
+            {
+              "id": "d1f432c0-ec87-46b6-9dc3-22724d72be8f",
+              "name": "label",
+              "label": null,
+              "value": "Adjustable Rate (ARM)"
+            },
+            {
+              "id": "678f6654-2f75-4211-9821-a95e7b331660",
+              "name": "description",
+              "label": null,
+              "value": "My interest rate may change over time"
+            },
+            {
+              "id": "48d4289c-002a-49ff-9fe4-4393fd0ed09c",
+              "name": "image",
+              "label": null,
+              "value": "9_graph_fluctuating_line.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "ea976434-5eb1-4cb1-8aaf-cafa48669d03",
+                "condition": {
+                  "id": "3fc018fd-8539-4026-b344-d46a6fe05d89",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "f3238549-63e0-4578-946e-7022c440cc65",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "first_loan_adj",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "screen_template_id": "40411713-2284-4332-a096-465dea177504",
+  "name": "three_day_expiry",
+  "state": "draft",
+  "title": "When would you like this offer to expire?",
+  "label": "Offer Expiry",
+  "description": "Would you like it to expire 3 calendar days after all buyers have signed the agreement (default) or on a specific date and time?",
+  "stage": "final_details",
+  "section": "offer_expiration",
+  "scope": {},
+  "tips": "There are many factors to consider here as you want the seller to make a fast decision, but you don't want to make it hard for them to respond if multiple people in different locations own the property.",
+  "tip_links": {},
+  "small_print": "Consider the seller's need for adequate review time when selecting your offer expiration option. The expiration date and time will be clearly stated in the offer documents.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "OFFER-EXPIRY-2024-001",
+    "notes": "Offer expiration type selection"
+  },
+  "components": {
+    "three_day_expiry": {
+      "id": "c5d844e8-2e62-40f1-aafc-c87c578e54f0",
+      "component_type": "select_single_cards",
+      "name": "three_day_expiry",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select offer expiration option",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "5295c9e4-0cd1-48b2-b73f-085515be7012",
+          "component_type": "select_card",
+          "name": "three_day_expiry_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Expire after 3 days",
+          "fields": [
+            {
+              "id": "7fbff97e-c98a-458e-ac30-842aa2f7e3a3",
+              "name": "label",
+              "label": null,
+              "value": "Offer should expire 3 days after all buyer signatures"
+            },
+            {
+              "id": "042da697-feca-4809-ae2b-5314ec0f8fce",
+              "name": "description",
+              "label": null,
+              "value": "Standard 3-day expiration period"
+            },
+            {
+              "id": "ca276a11-2b68-416b-b36b-e5eea711abf4",
+              "name": "image",
+              "label": null,
+              "value": "39_calendar.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "21fe4c42-22c0-4468-a445-c8e2ee20d31b",
+                "condition": {
+                  "id": "606a4592-e5cb-44c2-9fde-2c7199128630",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "e45c3148-afcf-4b2c-86dd-446f593cbd37",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "three_day_expiry",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "439382c4-3a35-4190-bfeb-8fee67b317a5",
+          "component_type": "select_card",
+          "name": "three_day_expiry_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Specify expiration date and time",
+          "fields": [
+            {
+              "id": "04f2cac2-92e1-4cb6-9853-e456f8dab3aa",
+              "name": "label",
+              "label": null,
+              "value": "Offer should expire on a specific date and time"
+            },
+            {
+              "id": "72042ba7-b72d-4d0f-9174-e5c4bfc23a92",
+              "name": "description",
+              "label": null,
+              "value": "Choose custom expiration date and time"
+            },
+            {
+              "id": "3e4614b2-dd8e-44a1-aa1c-69160689f938",
+              "name": "image",
+              "label": null,
+              "value": "40_not_calendar.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "72a06af3-5d45-4b20-abae-54f8dc34d300",
+                "condition": {
+                  "id": "62fbd661-e465-4abe-ad7a-477c3bec2d80",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "68c8654a-82a0-431f-9cd4-14011fd33d9a",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "three_day_expiry_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

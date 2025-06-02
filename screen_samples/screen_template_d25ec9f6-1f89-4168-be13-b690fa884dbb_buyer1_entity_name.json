@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "d25ec9f6-1f89-4168-be13-b690fa884dbb",
+  "name": "buyer1_entity_name",
+  "state": "draft",
+  "title": "Please enter a generic name for the Authorized Representative.",
+  "label": "First Rep Name",
+  "description": "If Trust, type \"trustee of the trust\" or a simplified trust name like \"John/Jane Doe,\" \"co-trustee\" or \"Doe Revocable Family Trust.\" If the property is sold under the jurisdiction of a probate court, type \"executor\" or \"administrator,\" or a simplified probate name like \"John/Jane Doe, executor\" or \"Estate of John/Jane Doe.\"",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer1_type_entity": true
+  },
+  "tips": "Ensure the entity name matches entity documentation and follows any required naming conventions for your jurisdiction.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER-ENTITY-2024-001",
+    "notes": "Entity name for authorized representative"
+  },
+  "components": {
+    "buyer1_entity_name": {
+      "id": "fbda28c1-429e-40fd-b6b3-83188afb7fdd",
+      "component_type": "input_text_line",
+      "name": "buyer1_entity_name",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the authorized representative name",
+      "fields": [
+        {
+          "id": "99e77173-8dbe-4ad0-8bdc-1ed64cf03a0f",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter authorized representative name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

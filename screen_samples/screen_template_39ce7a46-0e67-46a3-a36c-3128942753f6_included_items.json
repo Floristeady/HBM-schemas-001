@@ -1,0 +1,67 @@
+{
+  "screen_template_id": "39ce7a46-0e67-46a3-a36c-3128942753f6",
+  "name": "included_items",
+  "state": "draft",
+  "title": "Please list all additional items that you would like included with the property purchase.",
+  "label": "Included Items",
+  "description": "Please only list items that were not shown on the previous screen.",
+  "stage": "standard",
+  "section": "included_items",
+  "scope": {},
+  "tips": "Be specific when describing additional items. Include brand names, locations, or distinguishing features when possible.",
+  "tip_links": {},
+  "small_print": "Remember to list any mounted TVs, custom window treatments, or outdoor items like planters or furniture you'd like included. Keep in mind this is a request that you will want to discuss with the seller before submitting your offer.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ADDITIONAL-ITEMS-2024-001",
+    "notes": "Additional items to be included"
+  },
+  "components": {
+    "included_items": {
+      "id": "34ca8fe4-cccf-4378-971e-f494b89775ca",
+      "component_type": "input_text_area",
+      "name": "included_items",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": {
+        "value": "empty",
+        "hint": "This field is optional, so you may leave it empty. Any input you provide will be reviewed by our Smart Buy Team and might prompt us to ask for a bit more information.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 0,
+        "max_length": 500
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Add additional items to include",
+      "fields": [
+        {
+          "id": "ae0fb03d-a544-4186-ac2b-7360bd77db88",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter additional items to include (one per line)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

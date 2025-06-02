@@ -1,0 +1,175 @@
+{
+  "screen_template_id": "e28c6876-06bc-4334-af5a-c66d4383d86b",
+  "name": "contingency_reports_review",
+  "state": "draft",
+  "title": "Will your purchase be contingent upon your review of seller disclosures and information?",
+  "label": "Information Review",
+  "description": "A broad range of documents may exist based on the type of property or unique circumstances.",
+  "stage": "competitive",
+  "section": "contingencies",
+  "scope": {
+    "contingency_all_waived_no": true
+  },
+  "tips": "Seller disclosures provide important information about known property issues and history.",
+  "tip_links": {
+    "Understanding Disclosures": {
+      "label": "Understanding Disclosures",
+      "url": "https://www.homebuyme.com/insights/all-about-the-review-of-seller-documents-contingency/"
+    }
+  },
+  "small_print": "Best practices allow the Buyer to review everything the Seller has disclosed about the property. Once reviewed, the Seller's Agent will want to have a signature stating the Buyer has reviewed and approved it. It is recommended you review all documentation to better understand Owner responsibilities.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "REPORTS-REVIEW-2024-001",
+    "notes": "Initial selection for reports review contingency"
+  },
+  "components": {
+    "contingency_reports_review": {
+      "id": "c341ae13-efac-47b6-8043-524ce4629798",
+      "component_type": "select_single_cards",
+      "name": "contingency_reports_review",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "contingency_reports_review_yes",
+        "hint": "Waiving this contingency is not advised.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether to include reports review contingency",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "05b30536-6ba5-447c-83cb-10b5cf7b17e0",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": null,
+          "fields": [
+            {
+              "id": "98de79a0-ca32-4d76-a76c-6b84bd50b9d0",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "0d438aea-784b-4f64-8128-7ec3c7e9d426",
+              "name": "description",
+              "label": null,
+              "value": "Include reports review contingency"
+            },
+            {
+              "id": "351def39-60c2-42e5-9cb3-b74a7e3116cc",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "cea6ecde-535b-4f55-a474-8b12a06a4ae0",
+                "condition": {
+                  "id": "7ea19f0b-1c1d-42c0-bba0-9ede3bf238b8",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "976815ba-871e-480a-bec8-8828d9f473f5",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_reports_review",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a56b0dec-a2e4-496b-8f88-841fc99af208",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": null,
+          "fields": [
+            {
+              "id": "d812114b-a43b-4335-bdc5-e3983a7a4d2d",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "d2f4214f-8edd-48be-95d8-aa5da3338f20",
+              "name": "description",
+              "label": null,
+              "value": "Waive reports review contingency"
+            },
+            {
+              "id": "33e997da-cdb4-4661-bbfc-386895159643",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "c7186e04-b983-4c01-b3c8-3201a01c547b",
+                "condition": {
+                  "id": "28fec5a7-35f9-4bcf-a12a-0dc3d4f9428b",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "228bf578-ca0f-41ce-a424-426858e510ca",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_reports_review_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

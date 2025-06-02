@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "dfadf1e6-ef39-4e44-8d93-444a29eda503",
+  "name": "buyer3_entity_signer_name",
+  "state": "draft",
+  "title": "Third Signer's Name",
+  "label": "Third Signer",
+  "description": "Please enter the full legal name of the third signer.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer3_type_entity": true
+  },
+  "tips": "Enter the name exactly as it appears on legal identification documents.",
+  "tip_links": {},
+  "small_print": "The name must match your legal identification exactly.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER3-SIGNER-NAME-2024-001",
+    "notes": "Third signer's legal name"
+  },
+  "components": {
+    "buyer3_entity_signer_name": {
+      "id": "2281499c-8604-4a03-bb63-d026ce71b79e",
+      "component_type": "input_text_line",
+      "name": "buyer3_entity_signer_name",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter signer's legal name",
+      "fields": [
+        {
+          "id": "76f7c9c8-426a-4f50-a2ad-70f85cd551dd",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter full legal name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

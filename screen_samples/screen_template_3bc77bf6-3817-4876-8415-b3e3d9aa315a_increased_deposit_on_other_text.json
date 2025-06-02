@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "3bc77bf6-3817-4876-8415-b3e3d9aa315a",
+  "name": "increased_deposit_on_other_text",
+  "state": "draft",
+  "title": "What will trigger payment of the additional Earnest Money?",
+  "label": "2nd Deposit Event",
+  "description": "Please describe the condition or event that must occur in order for the additional Earnest Money to be paid.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "increased_deposit_on_other": true
+  },
+  "tips": "Be specific about the condition or event that will trigger the additional deposit.",
+  "tip_links": {},
+  "small_print": "Be specific. For example, if it is following the release of a contingency, you could note 'within 3 days of written notice of the home inspection contingency release.'",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "INCREASED-DEPOSIT-EVENT-2024-001",
+    "notes": "Trigger event for second earnest money deposit"
+  },
+  "components": {
+    "increased_deposit_on_other_text": {
+      "id": "9ac13d2a-ec88-4020-899a-ca739b59d917",
+      "component_type": "input_text_line",
+      "name": "increased_deposit_on_other_text",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "min_length": 10,
+        "max_length": 500,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe the trigger event for your additional earnest money deposit",
+      "fields": [
+        {
+          "id": "7f637e9b-a0c0-4739-834f-665a761fbfbb",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "e.g., After completion of home inspection",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

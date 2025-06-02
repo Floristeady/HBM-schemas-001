@@ -1,0 +1,160 @@
+{
+  "screen_template_id": "e5118a5c-2194-4056-974a-40cdc9684948",
+  "name": "deposit_payment_method",
+  "state": "draft",
+  "title": "How would you like to deliver the Earnest Money?",
+  "label": "Earnest Transfer",
+  "description": "This is typically by wire transfer.",
+  "stage": "standard",
+  "section": "performance",
+  "scope": {},
+  "tips": "Choose how you'll deliver the earnest money deposit. Wire transfers are usually the fastest and most secure method.",
+  "tip_links": {},
+  "small_print": "Some payment methods may take longer to process. Verify the preferred method with your escrow company. To ensure the safety of your funds, carefully verify the wiring number and all details before completing the transfer. Fraudulent activities sometimes target wire transfers, and double-checking the information helps protect you and your transaction. It's always a good idea to confirm the details with your escrow company directly using their official contact information.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "DEPOSIT-METHOD-2024-001",
+    "notes": "Selection of earnest money delivery method"
+  },
+  "components": {
+    "deposit_payment_method": {
+      "id": "c8e3df40-ea70-4fb4-97a9-3f68cffed022",
+      "component_type": "select_single_cards",
+      "name": "deposit_payment_method",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select how you will deliver the earnest money",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "b5a47371-1b13-47ca-9bde-e8ac0462d72f",
+          "component_type": "select_card",
+          "name": "deposit_payment_method_wire_transfer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Pay with wire transfer",
+          "fields": [
+            {
+              "id": "5a456249-98e9-492a-aaaa-8250bfea82cb",
+              "name": "label",
+              "label": null,
+              "value": "Wire Transfer"
+            },
+            {
+              "id": "c9083dea-efb1-43e7-8857-d49813a10549",
+              "name": "description",
+              "label": null,
+              "value": "Electronic funds transfer"
+            },
+            {
+              "id": "a18bca59-b7f3-4db0-b963-e74967fff70e",
+              "name": "image",
+              "label": null,
+              "value": "43_wire_transfer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "f48ae376-010a-43c8-894c-0526c28fd56c",
+          "component_type": "select_card",
+          "name": "deposit_payment_method_certified_check",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Pay with certified check",
+          "fields": [
+            {
+              "id": "26ee5d69-cc9a-41ae-ab1c-beedef342612",
+              "name": "label",
+              "label": null,
+              "value": "Certified Check"
+            },
+            {
+              "id": "cd6de40b-da5b-49fd-9d35-d4e93a541cd5",
+              "name": "description",
+              "label": null,
+              "value": "Bank-verified check"
+            },
+            {
+              "id": "75a4f7dd-43fe-48fd-bf33-8e8da10ec9e2",
+              "name": "image",
+              "label": null,
+              "value": "44_certified_check.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "0aeb6c0e-753b-43c0-b05a-3d14258aebdb",
+          "component_type": "select_card",
+          "name": "deposit_payment_method_personal_check",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Pay with personal check",
+          "fields": [
+            {
+              "id": "26564b36-d2ed-401a-913c-08ed283c95c7",
+              "name": "label",
+              "label": null,
+              "value": "Personal Check"
+            },
+            {
+              "id": "0627a2f0-d252-4f88-82df-b90f4deb6f80",
+              "name": "description",
+              "label": null,
+              "value": "Standard personal check"
+            },
+            {
+              "id": "3fbef94f-f33e-4458-89ad-c7a03b4443d0",
+              "name": "image",
+              "label": null,
+              "value": "45_personal_check.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

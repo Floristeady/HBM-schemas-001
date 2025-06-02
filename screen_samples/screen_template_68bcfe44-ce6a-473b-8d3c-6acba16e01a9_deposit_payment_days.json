@@ -1,0 +1,74 @@
+{
+  "screen_template_id": "68bcfe44-ce6a-473b-8d3c-6acba16e01a9",
+  "name": "deposit_payment_days",
+  "state": "draft",
+  "title": "Within how many days after Acceptance will the Earnest Money be deposited?",
+  "label": "Earnest Deposit",
+  "description": "The Earnest Money is delivered to the Escrow Agent",
+  "stage": "standard",
+  "section": "performance",
+  "scope": {},
+  "tips": "Three to five business days is standard for depositing the earnest money with escrow.",
+  "tip_links": {
+    "Understanding Escrow": {
+      "label": "Understanding Escrow",
+      "url": "https://www.homebuyme.com/insights/escrow-fees-understanding-escrow-and-its-costs-in-the-homebuying-process/"
+    }
+  },
+  "small_print": "Once escrow is set up by either the seller's agent or the buyer, escrow will reach out directly to the buyer with instructions for wiring funds and other transaction related questions. Missing the earnest money deposit deadline may constitute a breach of contract. It is important to keep escrow informed if there will be any delays in the fund transfer.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "DEPOSIT-DAYS-2024-001",
+    "notes": "Days for earnest money deposit after acceptance"
+  },
+  "components": {
+    "deposit_payment_days": {
+      "id": "bcb9bf14-8667-46f1-a201-87c8ad4fe530",
+      "component_type": "input_number",
+      "name": "deposit_payment_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 3,
+      "value": null,
+      "suggested": {
+        "min": 3,
+        "max": 5,
+        "hint": "Any value outside of the suggested range will trigger a review by our Smart Buy Team.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 30
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Select number of days for earnest money deposit",
+      "fields": [
+        {
+          "id": "253f3524-4923-4727-8788-64ae73aedd13",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (1-30)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

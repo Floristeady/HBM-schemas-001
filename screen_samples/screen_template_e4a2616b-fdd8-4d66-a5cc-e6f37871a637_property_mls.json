@@ -1,0 +1,68 @@
+{
+  "screen_template_id": "e4a2616b-fdd8-4d66-a5cc-e6f37871a637",
+  "name": "property_mls",
+  "state": "draft",
+  "title": "Multiple Listing Service Number",
+  "label": "MLS Number",
+  "description": "What is the MLS listing number for this property?",
+  "stage": "basics",
+  "section": "your_property",
+  "scope": {
+    "listing_type_agent": true
+  },
+  "tips": "The MLS number is a unique identifier readily available online through any of the property listing services. If unable to locate the MLS Number or this Property is not yet listed on the MLS, please leave this blank.",
+  "tip_links": {},
+  "small_print": "Verify the MLS number is current and active for the property you intend to purchase.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PROPERTY-MLS-2024-001",
+    "notes": "MLS number entry for property identification"
+  },
+  "components": {
+    "property_mls": {
+      "id": "ea5ff7f7-0ec6-4bdb-b4ec-2b19fe03e6e8",
+      "component_type": "input_text_line",
+      "name": "property_mls",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is optional, so you may leave it empty. However, filling it out could expedite your offer processing.",
+        "warning": ""
+      },
+      "validation": {
+        "required": true,
+        "min_length": 5,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the property's MLS number",
+      "fields": [
+        {
+          "id": "eba751a0-e58d-403d-9294-04fa75e8db30",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter MLS number",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

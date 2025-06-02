@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "1bdcdf9c-cd33-44e4-a1c6-61dfc234ffde",
+  "name": "buyer2_name",
+  "state": "draft",
+  "title": "Second Signer's Name",
+  "label": "Second Signer",
+  "description": "Please enter the full legal name of the second signer.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer2_type_person": true
+  },
+  "tips": "Enter your name exactly as it appears on your legal identification.",
+  "tip_links": {},
+  "small_print": "Your name must match your legal identification exactly for all official documentation.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER2-NAME-2024-001",
+    "notes": "Second signer's legal name"
+  },
+  "components": {
+    "buyer2_name": {
+      "id": "058e47a2-9e16-4540-93f2-5dbd66470b03",
+      "component_type": "input_text_line",
+      "name": "buyer2_name",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": "",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter your full legal name",
+      "fields": [
+        {
+          "id": "444a3418-dcd4-40fc-8770-f5db73ce29d0",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter full legal name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "screen_template_id": "289152fb-3cb8-4585-9e73-137b3ba737b7",
+  "name": "property_zip",
+  "state": "draft",
+  "title": "What's the zip code of the property you are buying?",
+  "label": "Property Location",
+  "description": "Enter the 5-digit zip code of the property's address.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {},
+  "tips": "The zip code helps us determine if we can assist with your property purchase in that area.",
+  "tip_links": {},
+  "small_print": "Service availability varies by location. Entering an invalid or out-of-service zip code may limit our ability to process your offer.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PROPERTY-ZIP-2024-001",
+    "notes": "Critical for service area validation"
+  },
+  "components": {
+    "property_zip": {
+      "id": "c45c6358-7573-41f7-bd08-f4f9a69ac7c0",
+      "component_type": "input_zip",
+      "name": "property_zip",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "zip",
+        "required": true
+      },
+      "formatting": {
+        "type": "zip_code",
+        "mask": "#####"
+      },
+      "tooltip": "Enter the property's 5-digit zip code",
+      "fields": [
+        {
+          "id": "afb3dcd9-4b3b-4254-9894-126a28cbe451",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "92101",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [
+        {
+          "rule": {
+            "id": "b2f26a82-3620-49a8-8c80-e35d4a75a349",
+            "condition": {
+              "id": "35be76f1-71f4-4725-b78a-bc73b67e814f",
+              "path": "remote_data.serviced_zip_codes",
+              "operator": "not_contains",
+              "value": "this.value"
+            },
+            "action": {
+              "id": "083f6372-1adc-4d9a-b285-bbf6af3ad3c2",
+              "path": "globals",
+              "operation": "set",
+              "value": {
+                "name": "zip_code_not_serviced",
+                "value": true
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "screen_template_id": "d3a73415-803b-4638-b33a-f2a4731dd814",
+  "name": "additional_fees_payer",
+  "state": "draft",
+  "title": "Who will pay for any additional fees?",
+  "label": "Misc Payer",
+  "description": "Select who will pay for additional miscellaneous fees",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {
+    "additional_fees": true
+  },
+  "tips": "Be clear about who will be responsible for any additional fees identified in the transaction.",
+  "tip_links": {},
+  "small_print": "Payment responsibility for all additional fees must be clearly specified in the purchase agreement.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ADDITIONAL-FEES-PAYER-2024-001",
+    "notes": "Payment responsibility for miscellaneous fees"
+  },
+  "components": {
+    "additional_fees_payer": {
+      "id": "8f927998-83a9-48f2-927e-40a1567a5d49",
+      "component_type": "select_single_dropdown",
+      "name": "additional_fees_payer",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_vaue": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will pay the additional fees",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "8f3862c1-b625-4f56-8067-9b4f4960fa12",
+          "component_type": "select_option",
+          "name": "additional_fees_payer_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Seller pays additional fees",
+          "fields": [
+            {
+              "id": "8d72481d-1ed2-4414-8ecb-ddccbf081174",
+              "name": "label",
+              "label": null,
+              "value": "Seller"
+            },
+            {
+              "id": "5ba78c91-f3e9-4834-9c51-bc84c8b74bfa",
+              "name": "description",
+              "label": null,
+              "value": "Seller pays full cost"
+            },
+            {
+              "id": "420490b2-a564-44ca-abdc-7c1508f65ad3",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "e346a90f-adcb-477b-8c78-46af746badd2",
+          "component_type": "select_option",
+          "name": "additional_fees_payer_buyer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Buyer pays additional fees",
+          "fields": [
+            {
+              "id": "19a1bbb5-2730-4e96-b963-99328ce34ec1",
+              "name": "label",
+              "label": null,
+              "value": "Buyer"
+            },
+            {
+              "id": "37c18c60-f62e-45a0-97b9-95af356e381c",
+              "name": "description",
+              "label": null,
+              "value": "Buyer pays full cost"
+            },
+            {
+              "id": "2c1179ef-8824-4a6f-84fa-2ea43bcc4685",
+              "name": "image",
+              "label": null,
+              "value": "26_buyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "f13f063f-a9c0-4d24-804a-1e86f536f047",
+          "component_type": "select_option",
+          "name": "additional_fees_payer_both",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Split cost between buyer and seller",
+          "fields": [
+            {
+              "id": "776f25eb-201b-430d-8f6e-5ffc8608b8ae",
+              "name": "label",
+              "label": null,
+              "value": "Both"
+            },
+            {
+              "id": "3ddbb663-ac24-4ac2-a271-02391cf6380b",
+              "name": "description",
+              "label": null,
+              "value": "Split cost between both parties"
+            },
+            {
+              "id": "f33d7da4-b62e-439f-ac21-afbe8bf12b51",
+              "name": "image",
+              "label": null,
+              "value": "27_both_sellerbuyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    },
+    "additional_fees_payer_split": {
+      "id": "2df60edf-7edb-40dc-a33b-412f15617e59",
+      "component_type": "input_text_line",
+      "name": "additional_fees_payer_split",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": "parent.additional_fees_payer.value === 'both'",
+      "default_value": "50/50",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "min_length": 1,
+        "max_length": 100,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe how additional fees will be split",
+      "fields": [
+        {
+          "id": "955b1b6e-20ea-4ec3-ba18-ffe753e90404",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter the cost split details (e.g., 50/50)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

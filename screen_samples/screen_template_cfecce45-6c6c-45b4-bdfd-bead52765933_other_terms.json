@@ -1,0 +1,67 @@
+{
+  "screen_template_id": "cfecce45-6c6c-45b4-bdfd-bead52765933",
+  "name": "other_terms",
+  "state": "draft",
+  "title": "If there are any other miscellaneous terms that you would like to add to the Agreement, please describe them.",
+  "label": "Other Terms",
+  "description": "This is for terms that have not already been described elsewhere.",
+  "stage": "final_details",
+  "section": "other_terms",
+  "scope": {},
+  "tips": "Include any special arrangements or conditions that haven't been covered in previous sections. Be detailed and clear in your description.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "FINANCE-TERMS-OTHER-2024-001",
+    "notes": "Captures miscellaneous financing terms and conditions"
+  },
+  "components": {
+    "other_terms": {
+      "id": "9f3bf662-a35e-4beb-8b4b-c3df07bcdecf",
+      "component_type": "input_text_area",
+      "name": "other_terms",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "empty",
+        "hint": "This field is optional, so you may leave it empty. Any input you provide will be reviewed by our Smart Buy Team and might prompt us to ask for a bit more information.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "min_length": 0,
+        "max_length": 1000,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter any additional finance terms",
+      "fields": [
+        {
+          "id": "c55653e9-adee-4135-8470-bbb143a8d9d8",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter any additional financing terms that may apply to your offer",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

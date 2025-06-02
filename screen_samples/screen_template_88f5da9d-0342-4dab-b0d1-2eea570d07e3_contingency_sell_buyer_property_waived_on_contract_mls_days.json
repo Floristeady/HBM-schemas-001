@@ -1,0 +1,72 @@
+{
+  "screen_template_id": "88f5da9d-0342-4dab-b0d1-2eea570d07e3",
+  "name": "contingency_sell_buyer_property_waived_on_contract_mls_days",
+  "state": "draft",
+  "title": "Within how many days after acceptance of this offer will you sign a listing agreement with a Real Estate Broker?",
+  "label": "Broker Listing",
+  "description": "It's important that you do this quickly.",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_listing_no_broker": true
+  },
+  "tips": "Starting the broker selection process early helps ensure you meet your sale timeline. Have potential brokers identified before making this commitment.",
+  "tip_links": {},
+  "small_print": "The broker must be licensed in the jurisdiction where your property is located. The listing agreement must meet all legal requirements.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BROKER-LISTING-DAYS-2024-001",
+    "notes": "Days to sign listing agreement with broker"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_contract_mls_days": {
+      "id": "f5e487e8-91ba-424f-8a03-c82d49e2d672",
+      "component_type": "input_number",
+      "name": "contingency_sell_buyer_property_waived_on_contract_mls_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 3,
+      "value": null,
+      "suggested": {
+        "min": 1,
+        "max": 3,
+        "hint": "It is important to do this quickly to show your commitment to selling the property.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 5
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days to sign with a broker",
+      "fields": [
+        {
+          "id": "f8cdd9c3-8e84-4117-8cbc-cd15ee7a234c",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (default is 3)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

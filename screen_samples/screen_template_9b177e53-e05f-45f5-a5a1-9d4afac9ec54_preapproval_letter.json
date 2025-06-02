@@ -1,0 +1,170 @@
+{
+  "screen_template_id": "9b177e53-e05f-45f5-a5a1-9d4afac9ec54",
+  "name": "preapproval_letter",
+  "state": "draft",
+  "title": "Do you want to include a Pre-approval letter with your offer?",
+  "label": "Pre-approval Letter",
+  "description": "If not, you will provide it after your offer is accepted.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "funds_type_loan": true
+  },
+  "tips": "Delivering your pre-approval letter with the offer is a powerful way to make your offer more competitive and shows sellers you're a serious buyer.",
+  "tip_links": {},
+  "small_print": "If you don't have your letter ready now, you can always upload it later, before you submit your offer for review by our Smart Buy Team.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PREAPPROVAL-LETTER-2024-001",
+    "notes": "Initial document collection for pre-approval verification"
+  },
+  "components": {
+    "preapproval_letter": {
+      "id": "b7f0e82e-2a13-4c15-b7b4-780a96d77a6a",
+      "component_type": "select_single_cards",
+      "name": "preapproval_letter",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "preapproval_letter_yes",
+        "hint": "A loan pre-approval letter is highly recommended to help the seller understand your ability to complete this purchase.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select if you have a pre-approval letter ready",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "a87cce9e-cf43-4552-81c8-070fed24d6df",
+          "component_type": "select_card",
+          "name": "preapproval_letter_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Yes, I have a pre-approval letter",
+          "fields": [
+            {
+              "id": "f394b37a-dc3f-4ab8-ae47-e4497da8f9ed",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "003e3daa-0e75-4a3a-901b-14276c84e04b",
+              "name": "description",
+              "label": null,
+              "value": "I have a pre-approval letter ready to upload"
+            },
+            {
+              "id": "255fa2ed-6cbb-448c-9afc-a84455010bb9",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "e7b588cb-da23-4e3c-8a2a-147d3ea3b645",
+                "condition": {
+                  "id": "847b00c8-080b-4ef0-8c9b-5b187a581213",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "9dc10763-f283-48e4-a623-14561ff82791",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "preapproval_letter",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1e852a00-3dcd-4b70-b979-d498c11ca465",
+          "component_type": "select_card",
+          "name": "preapproval_letter_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No, I don't have a pre-approval letter yet",
+          "fields": [
+            {
+              "id": "2d8bb6a0-16bb-4148-b77f-0515a3f50546",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "814fc5f1-10cd-4b62-8928-11e5b8e8c546",
+              "name": "description",
+              "label": null,
+              "value": "I’ll deliver my pre-approval letter after offer is accepted"
+            },
+            {
+              "id": "8cdbcd2c-3831-43db-a668-562335122b67",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "d8a544a6-a2a8-4157-96b9-5adb37f66c86",
+                "condition": {
+                  "id": "591ae9b2-9fce-4808-b551-b61c521a2280",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "dfb561bc-a131-439c-a44c-4856e232b853",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "preapproval_letter_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

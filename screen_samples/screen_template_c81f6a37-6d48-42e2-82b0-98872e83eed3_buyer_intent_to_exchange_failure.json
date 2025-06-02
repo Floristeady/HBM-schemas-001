@@ -1,0 +1,189 @@
+{
+  "screen_template_id": "c81f6a37-6d48-42e2-82b0-98872e83eed3",
+  "name": "buyer_intent_to_exchange_failure",
+  "state": "draft",
+  "title": "What course of action should be taken if the 1031 exchange is not completed?",
+  "label": "Exchange Conditions",
+  "description": "Select the option stating what should occur if the exchange of property fails to be completed by close of escrow.",
+  "stage": "advanced",
+  "section": "intent_to_exchange",
+  "scope": {
+    "addendum_buyer_intent_to_exchange": true
+  },
+  "tips": "Think through what you'd like to have happen in case the exchange fails - items like earnest money deposit return, rescinding the offer, etc.",
+  "tip_links": {},
+  "small_print": "Your selected option will be legally binding and will determine the course of action if the exchange fails to complete by the specified date.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "EXCHANGE-FAILURE-2024-001",
+    "notes": "Failure handling for incomplete 1031 exchange"
+  },
+  "components": {
+    "buyer_intent_to_exchange_failure": {
+      "id": "37777849-a967-4bdd-9744-59989e8cab69",
+      "component_type": "select_single_dropdown",
+      "name": "buyer_intent_to_exchange_failure",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select what happens if the exchange fails",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "e5deae18-4cc6-42ae-879f-47df43316478",
+          "component_type": "select_option",
+          "name": "buyer_intent_to_exchange_failure_coe",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Extend Close of Escrow",
+          "fields": [
+            {
+              "id": "c11c7f5d-59e3-40a3-b1fb-3519dacd53eb",
+              "name": "label",
+              "label": null,
+              "value": "Extend the Close of Escrow for this offer"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "c8b719be-2cef-466e-b9d6-c1f506d28482",
+                "condition": {
+                  "id": "a9b95bda-0719-478e-a3ad-ed29f9391098",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "fb77117e-ba95-4594-8314-aacad8fcf11a",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_intent_to_exchange_failure_coe",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "28e2c191-6b53-4f15-b1ea-2286f6925066",
+          "component_type": "select_option",
+          "name": "buyer_intent_to_exchange_failure_cancel",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Cancel the offer",
+          "fields": [
+            {
+              "id": "70e5819b-b6b0-4184-a65c-ae5176778a6e",
+              "name": "label",
+              "label": null,
+              "value": "Cancel the offer and return any deposit(s)"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "14f7eb42-40ba-4ad1-b53f-5fa1a4a82761",
+                "condition": {
+                  "id": "deb567d3-7e9c-4153-934b-e89ba9033498",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "9eb4065e-ec55-42cd-8a09-7cf2ce4eea2a",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_intent_to_exchange_failure_cancel",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "303b2ecf-fb2e-4422-850f-b617b7eb4357",
+          "component_type": "select_option",
+          "name": "buyer_intent_to_exchange_failure_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Other option",
+          "fields": [
+            {
+              "id": "22dd65d9-b578-4fce-89ed-961a2da3953f",
+              "name": "label",
+              "label": null,
+              "value": "Specify another outcome"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "df6f4e21-62c5-4b35-9aa4-781cfa57926c",
+                "condition": {
+                  "id": "37199061-8228-4693-b18a-9a03158664a9",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "cca18f00-5528-4afa-8f56-3b7b8c049e4d",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_intent_to_exchange_failure_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

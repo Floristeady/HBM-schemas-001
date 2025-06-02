@@ -1,0 +1,67 @@
+{
+  "screen_template_id": "89794081-5b09-4e7d-9c3a-0bbb127607f2",
+  "name": "wildfire_disclosure_report_provider",
+  "state": "draft",
+  "title": "What company will provide the optional Wildfire Disclosure Report?",
+  "label": "Report Provider",
+  "description": "If you don't know, leave it blank for the seller to fill in.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "The provider should be experienced in California wildfire risk assessment.",
+  "tip_links": {},
+  "small_print": "The provider must be authorized to provide wildfire disclosure reports in California.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "WILDFIRE-PROVIDER-2024-001",
+    "notes": "Selection of wildfire report provider"
+  },
+  "components": {
+    "wildfire_disclosure_report_provider": {
+      "id": "ddc2101d-70df-424c-baf5-034ae968f43e",
+      "component_type": "input_text_line",
+      "name": "wildfire_disclosure_report_provider",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is optional, so you may leave it empty. However, filling it out could strengthen your offer and expedite its processing.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "min_length": 1,
+        "max_length": 100,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the name of the wildfire report provider",
+      "fields": [
+        {
+          "id": "84a0fe52-9b58-4c2c-ae15-5864acf8a6eb",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter provider name (optional)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

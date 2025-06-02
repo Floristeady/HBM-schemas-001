@@ -1,0 +1,170 @@
+{
+  "screen_template_id": "fd2ba061-8ce0-4589-b714-48e45e8a2e44",
+  "name": "all_cash_verification",
+  "state": "draft",
+  "title": "Would you like to include proof of funds with your offer?",
+  "label": "All Cash Verification",
+  "description": "It's alright if you don't have the documents ready to upload now. Choose 'Yes' and you can finish later.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "funds_type_cash": true
+  },
+  "tips": "Providing proof of funds will be neccessary to make your all-cash offer competitive.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ALL-CASH-VERIFY-2024-001",
+    "notes": "Verification choice for all cash offers"
+  },
+  "components": {
+    "all_cash_verification": {
+      "id": "8fdce468-6e3d-42ae-9a17-82fbca6dc86c",
+      "component_type": "select_single_cards",
+      "name": "all_cash_verification",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "all_cash_verification_docs",
+        "hint": "Proof of funds is highly recommended to help the seller understand your ability to complete this all-cash purchase.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether you want to include proof of funds now",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "2ec6883d-7fa8-4f62-9397-9343924e1346",
+          "component_type": "select_card",
+          "name": "all_cash_verification_docs",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Yes, I'll provide verification documents",
+          "fields": [
+            {
+              "id": "216f889c-62d2-40a4-9053-a163c1fee869",
+              "name": "label",
+              "label": null,
+              "value": "Yes, I'll verify"
+            },
+            {
+              "id": "f27f2f5e-838e-4e02-be4b-db578741b42a",
+              "name": "description",
+              "label": null,
+              "value": "Upload proof of funds"
+            },
+            {
+              "id": "0015ab48-c853-48ff-bc63-7e42980ce670",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "de34c8f1-b882-4492-9acb-a1d11ba83f6d",
+                "condition": {
+                  "id": "f66c1bee-26f2-4f6f-b31c-f6586e70affd",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "b73773c0-b75a-4894-b2bc-8cfeafb3f67a",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "all_cash_verification_docs",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "541f0db5-cd01-48df-b65b-5d991faa9ee7",
+          "component_type": "select_card",
+          "name": "all_cash_verification_no_docs",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No, I'll verify funds later",
+          "fields": [
+            {
+              "id": "6e4e72c6-cff0-46ea-8a5e-4fe587a0a327",
+              "name": "label",
+              "label": null,
+              "value": "No, later"
+            },
+            {
+              "id": "98893244-478f-4410-bf80-b1ed1ace9d40",
+              "name": "description",
+              "label": null,
+              "value": "I'll provide proof later"
+            },
+            {
+              "id": "884321cc-21d4-48e6-b0b8-d6135c83dd9c",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "c863a4d9-7449-4197-985e-5925bc42efad",
+                "condition": {
+                  "id": "8a92b6c0-845b-4f71-8e91-08b7666840dc",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "16e1fa20-0de5-4a44-9f7a-a3c664ce9de1",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "all_cash_verification_no_docs",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

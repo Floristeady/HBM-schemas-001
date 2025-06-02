@@ -1,0 +1,60 @@
+{
+  "screen_template_id": "e72b1e8f-95ad-4779-b70f-578fa9c631d4",
+  "name": "preapproval_letter_uploader",
+  "state": "draft",
+  "title": "Please upload your Pre-approval letter from your lender.",
+  "label": "Uploader",
+  "description": "If you don't have the documents ready, you can skip for now.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "preapproval_letter": true
+  },
+  "tips": "A pre-approval letter is an official document from your lender stating how much they're willing to lend you for a home purchase.",
+  "tip_links": {},
+  "small_print": "The pre-approval letter should be dated within the last 60 days and include the type of pre-approval and the approved loan amount.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PRE-APPROVAL-QUESTION-2024-001",
+    "notes": "Initial question about pre-approval letter availability"
+  },
+  "components": {
+    "preapproval_letter_uploader": {
+      "id": "4516b5a3-2f33-4eb0-b577-6032a780b272",
+      "component_type": "pick_file",
+      "name": "preapproval_letter_uploader",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "Since you chose to provide a pre-approval letter as part of your offer, uploading will be required to complete your offer.", 
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true,
+        "max_files": 1,
+        "allowed_file_types": [
+          "pdf",
+          "jpg",
+          "jpeg",
+          "png",
+          "doc",
+          "docx"
+        ]
+      },
+      "formatting": null,
+      "tooltip": "Upload your pre-approval letter from your lender",
+      "fields": [],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "95cd83e4-c014-402c-8552-cb2c6ca5319b",
+  "name": "buyer2_entity_name",
+  "state": "draft",
+  "title": "Please enter a generic name for the Authorized Representative.",
+  "label": "Second Rep Name",
+  "description": "If Trust, type \"trustee of the trust\" or a simplified trust name like \"John/Jane Doe,\" \"co-trustee\" or \"Doe Revocable Family Trust.\" If Property is sold under the jurisdiction of a probate court, type \"executor\" or \"administrator,\" or a simplified probate name like \"John/Jane Doe, executor\" or \"Estate of John/Jane Doe.\"",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer2_type_entity": true
+  },
+  "tips": "Ensure the entity name matches entity documentation and follows any required naming conventions for your jurisdiction.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER2-ENTITY-2024-001",
+    "notes": "Second buyer's entity name"
+  },
+  "components": {
+    "buyer2_entity_name": {
+      "id": "85fbeb22-4ea8-45a9-a03c-cbde97ff08c4",
+      "component_type": "input_text_line",
+      "name": "buyer2_entity_name",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 100
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the entity name",
+      "fields": [
+        {
+          "id": "c5017cda-eba8-4991-af45-ec9b0701c8d6",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter entity name",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

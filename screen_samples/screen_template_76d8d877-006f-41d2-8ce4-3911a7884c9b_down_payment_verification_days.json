@@ -1,0 +1,71 @@
+{
+  "screen_template_id": "76d8d877-006f-41d2-8ce4-3911a7884c9b",
+  "name": "down_payment_verification_days",
+  "state": "draft",
+  "title": "How many days after Acceptance of your offer will you upload proof of down payment funds?",
+  "label": "Verification Days",
+  "description": "Since you aren't providing verification documents with your offer, you need to do so after Acceptance.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "down_payment_verification_no_docs": true
+  },
+  "tips": "This is typically within three (3) days after acceptance or before expiration of the offer.",
+  "tip_links": {},
+  "small_print": "The verification timeline starts from the date of offer acceptance.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "DOWN-PAYMENT-VERIFY-DAYS-2024-001",
+    "notes": "Days to provide down payment verification after acceptance"
+  },
+  "components": {
+    "down_payment_verification_days": {
+      "id": "878c70d5-3f61-43ce-a864-da54a4cc826a",
+      "component_type": "input_number",
+      "name": "down_payment_verification_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 3,
+      "value": null,
+      "suggested": {
+        "min": 0,
+        "max": 5,
+        "hint": "The industry standard is 3 days.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "min_value": 0,
+        "max_value": 99,
+        "required": true
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days",
+      "fields": [
+        {
+          "id": "78a4703f-6e9e-4527-9299-0113a5d95f65",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter days",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

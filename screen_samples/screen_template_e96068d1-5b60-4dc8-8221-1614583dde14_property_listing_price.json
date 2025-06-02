@@ -1,0 +1,62 @@
+{
+  "screen_template_id": "e96068d1-5b60-4dc8-8221-1614583dde14",
+  "name": "property_listing_price",
+  "state": "draft",
+  "title": "How much is the property listed for?",
+  "label": "Listing Price",
+  "description": "Please let us know the seller's asking price.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {},
+  "tips": "The listing price is your starting point for negotiations.",
+  "tip_links": {},
+  "small_print": "The listing price provided should match the official price as advertised by the seller or seller's agent.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PROPERTY-PRICE-2024-001",
+    "notes": "Initial price point for offer calculations"
+  },
+  "components": {
+    "property_listing_price": {
+      "id": "5bab683f-aa08-4c34-a874-a17ca30923a3",
+      "component_type": "input_currency",
+      "name": "property_listing_price",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 0,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "currency",
+        "required": true
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the property's current listing price",
+      "fields": [
+        {
+          "id": "7437d8a4-8595-4eda-a93a-6515db9aaeb0",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter listing price",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

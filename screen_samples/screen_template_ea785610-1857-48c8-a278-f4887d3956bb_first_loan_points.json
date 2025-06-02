@@ -1,0 +1,71 @@
+{
+  "screen_template_id": "ea785610-1857-48c8-a278-f4887d3956bb",
+  "name": "first_loan_points",
+  "state": "draft",
+  "title": "Will you be paying points to lower your interest rate?",
+  "label": "Loan Points",
+  "description": "Tell us how many points you plan to pay.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {
+    "funds_type_loan": true
+  },
+  "tips": "This information would be provided by your lender on the term sheet attached to the pre-approval letter (if you have one).",
+  "tip_links": {
+    "About Loan Points": {
+      "label": "About Loan Points",
+      "url": "https://homebuyme.com/insights/understanding-loan-points-how-they-affect-your-mortgage/"
+    }
+  },
+  "small_print": "Points are upfront fees paid to lower your interest rate. Each point costs 1% of your loan amount and typically lowers your rate by 0.25%. Consider consulting with your lender about whether paying points makes financial sense for your situation.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LOAN-POINTS-2024-001",
+    "notes": "Affects closing costs and monthly payment calculations"
+  },
+  "components": {
+    "first_loan_points": {
+      "id": "03aedce1-cc8c-4344-bbe4-0b5863bf0c48",
+      "component_type": "input_number",
+      "name": "first_loan_points",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 0,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "number",
+        "min_value": 0,
+        "max_value": 4,
+        "required": true
+      },
+      "formatting": {
+        "decimal_places": 3,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of points you'll pay",
+      "fields": [
+        {
+          "id": "9f7dd823-57de-4812-aa43-a4d9eef8a0fe",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter points (e.g., 1.5)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

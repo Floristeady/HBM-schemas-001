@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "aa9d4f67-4d77-4992-a3d8-3430285ae882",
+  "name": "buyer2_entity_title",
+  "state": "draft",
+  "title": "Second Signer's Title",
+  "label": "Second Signer Title",
+  "description": "If applicable, please enter the second signer's title in the entity.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer2_type_entity": true
+  },
+  "tips": "Enter the official title that reflects the signer's role for the type of entity (e.g., Director, Manager, Partner, President, CEO, Trustee, Executor, etc.).",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER2-TITLE-2024-001",
+    "notes": "Second signer's title in entity"
+  },
+  "components": {
+    "buyer2_entity_title": {
+      "id": "e65d0e35-5d70-4a68-a9be-b3ada95d0229",
+      "component_type": "input_text_line",
+      "name": "buyer2_entity_title",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 50
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter your title in the entity",
+      "fields": [
+        {
+          "id": "a8d358f8-dc58-408c-b040-f16677ebd88c",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter title (e.g., Trustee, Manager)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "screen_template_id": "69076f88-15c8-4f72-b9c5-fb68be5b0fde",
+  "name": "home_warranty_issuer",
+  "state": "draft",
+  "title": "What company will be issuing the Home Warranty?",
+  "label": "Warranty Company",
+  "description": "If you don't know, leave this blank and you or the seller can fill it in later.",
+  "stage": "final_details",
+  "section": "home_warranty",
+  "scope": {
+    "home_warranty": true
+  },
+  "tips": "Choose a reputable home warranty company with good coverage and service history.",
+  "tip_links": {},
+  "small_print": "The warranty company must be licensed to operate in your state.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "WARRANTY-ISSUER-2024-001",
+    "notes": "Home warranty company specification"
+  },
+  "components": {
+    "home_warranty_issuer": {
+      "id": "9c625d0b-dc5d-424e-a632-b2a0c2a26354",
+      "component_type": "input_text_line",
+      "name": "home_warranty_issuer",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is required based on your previous choices.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "min_length": 1,
+        "max_length": 100,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the name of the warranty company",
+      "fields": [
+        {
+          "id": "9a1e65ce-0622-479f-ac51-4755b07671f1",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter warranty company name (optional)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

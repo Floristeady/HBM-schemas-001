@@ -1,0 +1,146 @@
+{
+  "screen_template_id": "643eeb3a-3edc-4b06-ad69-b570b5374e4c",
+  "name": "contingency_sell_buyer_property",
+  "state": "draft",
+  "title": "Sale of Buyer Property Contingency",
+  "label": "Buyer Sale",
+  "description": "Will your offer be contingent upon the sale of your home?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {},
+  "tips": "A home sale contingency allows you to make your purchase contingent on selling your current property.",
+  "tip_links": {
+    "Sale Contingency": {
+      "label": "Understanding Sale Contingencies",
+      "url": "https://homebuyme.com/insights/the-sale-of-buyers-property-contingency-what-it-is-and-should-you-waive-it/"
+    }
+  },
+  "small_print": "Although including a home sale contingency may make your offer less competitive in a multiple offer situation, if you are selling your current property and intend to use those funds toward the purchase of this property, you will want to protect yourself by including this contingency.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SELL-BUYER-PROPERTY-2024-001",
+    "notes": "Selection for home sale contingency"
+  },
+  "components": {
+    "contingency_sell_buyer_property": {
+      "id": "d37dc1fe-4c76-4042-8532-821c860ad5aa",
+      "component_type": "select_single_cards",
+      "name": "contingency_sell_buyer_property",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": false,
+      "suggested": {
+        "value": "contingency_sell_buyer_property_no",
+        "hint": "Including this contingency is an advanced option that will require further review by our Smart Buy Team.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether your offer depends on selling your current property",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "383a81d0-2145-4726-9400-039c760f0c82",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Include home sale contingency",
+          "fields": [
+            {
+              "id": "c9deea35-39eb-4383-81bc-ae206ad3ea01",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "527e454e-ba9d-4891-9356-54555e063aba",
+              "name": "description",
+              "label": null,
+              "value": "Offer contingent on home sale"
+            },
+            {
+              "id": "4b84de98-c60b-4942-9435-643e674a438d",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "26965159-3b35-4402-91a4-9e1b99fc3219",
+                "condition": {
+                  "id": "654d0a3f-40bb-4866-9de9-db1c44667a68",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "a8c0650c-b494-4456-840e-e38fb3900e97",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f7c437ee-d349-4916-9d4d-ac264f6b6f12",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "No home sale contingency needed",
+          "fields": [
+            {
+              "id": "37764c17-1b2e-475e-88db-9838f2154fb5",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "010ddd35-17e6-44bc-ac10-049cbcf643c5",
+              "name": "description",
+              "label": null,
+              "value": "No home sale contingency"
+            },
+            {
+              "id": "c8d75938-c22c-45d4-839d-a1e112596b3a",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

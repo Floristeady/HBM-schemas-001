@@ -1,0 +1,65 @@
+{
+  "screen_template_id": "267e71a7-9989-4ea4-8ab3-38004f039bcf",
+  "name": "owners_title_insurance_company",
+  "state": "draft",
+  "title": "What is the name of the Owner's Title Insurance company?",
+  "label": "Title Company",
+  "description": "If you don't have a Title Insurance company you'd like to use, you can skip this and fill it in later or let the seller choose.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "Choose a reputable title insurance company licensed in California.",
+  "tip_links": {},
+  "small_print": "The title insurance company must be licensed to operate in California.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "TITLE-COMPANY-2024-001",
+    "notes": "Selection of title insurance company"
+  },
+  "components": {
+    "owners_title_insurance_company": {
+      "id": "143c7531-1815-4ea8-8f35-09edaf6b37c4",
+      "component_type": "input_text_line",
+      "name": "owners_title_insurance_company",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is optional, so you may leave it empty. However, filling it out could strengthen your offer and expedite its processing.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the name of the title insurance company",
+      "fields": [
+        {
+          "id": "d2cc87d3-cee4-4d06-bbbb-3fb612fc06cf",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter title insurance company name (optional)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

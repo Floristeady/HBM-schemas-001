@@ -1,0 +1,158 @@
+{
+  "screen_template_id": "e517adce-1264-442e-aa5e-dad39c983c47",
+  "name": "buyer_entity",
+  "state": "draft",
+  "title": "Will any of the buyers be signing as an Authorized Representative of an entity?",
+  "label": "Entity Buyers",
+  "description": "An entity is a trust, corporation, LLC, partnership, probate estate, someone holding a power of attorney, or other entity.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {},
+  "tips": "Entity buyers will need to provide documentation proving their authority to sign.",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER-ENTITY-2024-001",
+    "notes": "Selection for entity buyers"
+  },
+  "components": {
+    "buyer_entity": {
+      "id": "f17fcc1e-11a9-4409-9a7c-f8a661f05d17",
+      "component_type": "select_single_cards",
+      "name": "buyer_entity",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether any buyers are signing for entities",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "144d6cf5-0a22-42bf-ab9b-8dfed9f15544",
+          "component_type": "select_card",
+          "name": "buyer_entity_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "One or more buyers signing for entities",
+          "fields": [
+            {
+              "id": "1fd96dff-129d-4066-b446-16c23b12851a",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "c1173be9-88c3-44c0-9176-8013f44d79de",
+              "name": "description",
+              "label": null,
+              "value": "One or more signers is signing as an Authorized Representative of an Entity"
+            },
+            {
+              "id": "ecdea97b-a8ab-4dcb-9cc5-3c7a543b800e",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "bc5b0108-a74d-4e39-9ad9-02d13d25dd47",
+                "condition": {
+                  "id": "8e327474-a962-4889-a942-e2a7823ac348",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "6bc5bd11-cffc-457a-8b04-914b9b18e69d",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_entity",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1fc2962e-9128-4d2c-a6f9-788af45e2441",
+          "component_type": "select_card",
+          "name": "buyer_entity_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "No buyers signing for entities",
+          "fields": [
+            {
+              "id": "6e8612ac-a3a2-4a1d-9aa8-ead8326c677b",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "cf402571-d911-4721-be51-c85be44a7153",
+              "name": "description",
+              "label": null,
+              "value": "No one is signing as an Authorized Representative"
+            },
+            {
+              "id": "2dd37f08-ac0b-4c55-ba97-1e1e8bf36a23",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "d5b09ccd-f343-4de9-b1e2-1ec303dbbd11",
+                "condition": {
+                  "id": "732efcb3-47df-4329-9a55-bfe728f1a8c5",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ce6aa2f8-3eba-4bfe-9273-3474b720f32c",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer_entity_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

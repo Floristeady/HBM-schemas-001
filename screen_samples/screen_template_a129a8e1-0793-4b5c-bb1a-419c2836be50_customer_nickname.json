@@ -1,0 +1,63 @@
+{
+  "screen_template_id": "a129a8e1-0793-4b5c-bb1a-419c2836be50",
+  "name": "customer_nickname",
+  "state": "draft",
+  "title": "What would you like us to call you?",
+  "label": "Preferred Name",
+  "description": "Share your preferred first name. We'll get the rest later.",
+  "stage": "basics",
+  "section": "welcome",
+  "scope": {},
+  "tips": "We'll use this name when we provide assistance. Note that this name will not appear anywhere on your offer.",
+  "tip_links": {},
+  "small_print": "Your preferred name will enhance your experience but won't be used legally.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ABOUT-YOU-2024-001",
+    "notes": "First personal interaction point with customer"
+  },
+  "components": {
+    "customer_nickname": {
+      "id": "0baa5a97-2120-439f-986a-d1671e65e403",
+      "component_type": "input_text_line",
+      "name": "customer_nickname",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": "",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "min_length": 1,
+        "max_length": 36,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter your preferred first name. This is how we'll address you throughout your journey.",
+      "fields": [
+        {
+          "id": "917acfdd-7ec7-473d-bfbb-8ebf686fcf01",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Input your nickname",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

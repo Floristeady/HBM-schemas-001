@@ -1,0 +1,64 @@
+{
+  "screen_template_id": "e04ae9d3-5c71-42f7-b7c1-fee995df66d9",
+  "name": "seller1_email_fsbo",
+  "state": "draft",
+  "title": "What is the email address of the first seller signer?",
+  "label": "Seller Email",
+  "description": "This is where we will send the agreement for review and to gather signatures from all the other seller signers.",
+  "stage": "final_details",
+  "section": "sellers",
+  "scope": {
+    "listing_type_fsbo": true
+  },
+  "tips": "Be sure this is an email address that the seller signer checks regularly as this will be used for important document delivery and communications.",
+  "tip_links": {},
+  "small_print": "The first seller signer will be responsible for forwarding the agreement Docusign to all other seller signers.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "SELLER1-FSBO-EMAIL-2024-001",
+    "notes": "First seller signer's email address"
+  },
+  "components": {
+    "seller1_email_fsbo": {
+      "id": "da999dfa-402e-45c3-9f5a-c7fb1a9d6aaa",
+      "component_type": "input_email",
+      "name": "seller1_email_fsbo",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "email",
+        "required": true,
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      },
+      "formatting": {
+        "type": "email"
+      },
+      "tooltip": "Enter the first seller signer's email address",
+      "fields": [
+        {
+          "id": "d88187bf-193f-483b-900b-c986f5120c16",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter email address",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

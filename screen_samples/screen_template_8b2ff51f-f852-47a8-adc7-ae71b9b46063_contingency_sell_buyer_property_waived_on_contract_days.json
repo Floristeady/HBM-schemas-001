@@ -1,0 +1,72 @@
+{
+  "screen_template_id": "8b2ff51f-f852-47a8-adc7-ae71b9b46063",
+  "name": "contingency_sell_buyer_property_waived_on_contract_days",
+  "state": "draft",
+  "title": "Amount of time to enter into contract to sell property",
+  "label": "Contract Days",
+  "description": "Within how many days after acceptance of this offer will you enter into a contract to sell your current property?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_and_coe": true,
+    "contingency_sell_buyer_property_waived_on_contract": true
+  },
+  "tips": "Consider your market conditions and how quickly properties are selling in your area when determining the number of days needed.",
+  "tip_links": {},
+  "small_print": "Keep in mind that sellers could be reluctant to accept an offer contingent upon a residence that is not already in escrow. Sometimes waiting until you have acceptance on your existing home could benefit you more in the long run as well as make for a smoother set of transactions.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "CONTRACT-DAYS-2024-001",
+    "notes": "Days allowed to enter contract for existing property"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_contract_days": {
+      "id": "a53fd229-70dc-4972-a39d-cae07f2af2a7",
+      "component_type": "input_number",
+      "name": "contingency_sell_buyer_property_waived_on_contract_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 17,
+      "value": null,
+      "suggested": {
+        "max": 17,
+        "hint": "The input value falls outside of suggested values",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 30
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days needed to secure a contract",
+      "fields": [
+        {
+          "id": "f03a9680-1a50-46a9-8dbd-d9a14c50d1db",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (minimum 17)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

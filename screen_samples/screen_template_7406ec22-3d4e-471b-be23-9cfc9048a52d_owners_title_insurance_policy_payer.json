@@ -1,0 +1,203 @@
+{
+  "screen_template_id": "7406ec22-3d4e-471b-be23-9cfc9048a52d",
+  "name": "owners_title_insurance_policy_payer",
+  "state": "draft",
+  "title": "Who will pay for the Owner's title insurance policy?",
+  "label": "Owner's Title Payer",
+  "description": "This is typically split 50/50 between the buyer and seller.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "These fees are customarily split equally between the buyer and the seller. However, this could be subject to negotiation.",
+  "tip_links": {
+    "Understanding Title Insurance": {
+      "label": "Understanding Title Insurance",
+      "url": "https://www.homebuyme.com/insights/owners-title-insurance-policy-what-it-is-and-who-pays-for-it/"
+    }
+  },
+  "small_print": "Owner's title insurance protects your ownership interest in the property. It is a one-time fee that provides protection for as long as you own the property.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "TITLE-INSURANCE-PAYER-2024-001",
+    "notes": "Payment responsibility for owner's title insurance"
+  },
+  "components": {
+    "owners_title_insurance_policy_payer": {
+      "id": "78fc7b8e-4b8a-4194-b733-ec5f7ffa445c",
+      "component_type": "select_single_dropdown",
+      "name": "owners_title_insurance_policy_payer",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will pay for the title insurance",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "70bede64-d128-44cd-94a9-c8c0aa53e87b",
+          "component_type": "select_option",
+          "name": "owners_title_insurance_policy_payer_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Seller pays for title insurance",
+          "fields": [
+            {
+              "id": "0214da71-1105-4fae-85dd-1802e0d1b630",
+              "name": "label",
+              "label": null,
+              "value": "Seller"
+            },
+            {
+              "id": "a588303d-1def-4f97-a882-5949d67f1678",
+              "name": "description",
+              "label": null,
+              "value": "Seller pays full cost"
+            },
+            {
+              "id": "21578765-4b5d-43ea-ab18-2b404cd2c7eb",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "bcbf679e-74a1-4aa7-be48-a75197154da6",
+          "component_type": "select_option",
+          "name": "owners_title_insurance_policy_payer_buyer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Buyer pays for title insurance",
+          "fields": [
+            {
+              "id": "5a2bce79-f48b-40cb-a6eb-21ee11f77c96",
+              "name": "label",
+              "label": null,
+              "value": "Buyer"
+            },
+            {
+              "id": "0ddad4bb-6de7-4252-9560-70af51fc9f18",
+              "name": "description",
+              "label": null,
+              "value": "Buyer pays full cost"
+            },
+            {
+              "id": "f0961d9b-e79c-482a-a91a-fee8ddc60f58",
+              "name": "image",
+              "label": null,
+              "value": "26_buyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "68e6adcc-a5fd-464d-8b53-b69003b072e5",
+          "component_type": "select_option",
+          "name": "owners_title_insurance_policy_payer_both",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Split cost between buyer and seller",
+          "fields": [
+            {
+              "id": "11ff94a6-c898-47c5-b6b8-3e0378762f85",
+              "name": "label",
+              "label": null,
+              "value": "Both"
+            },
+            {
+              "id": "8b9dc68b-29d4-41ff-a5f8-963e57c5de79",
+              "name": "description",
+              "label": null,
+              "value": "Split cost between both parties"
+            },
+            {
+              "id": "2d87c410-7a47-4358-b106-92dc8000e1ed",
+              "name": "image",
+              "label": null,
+              "value": "27_both_sellerbuyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    },
+    "owners_title_insurance_policy_payer_split": {
+      "id": "c38ee11f-2418-4b4f-be2c-cc1c0ff2434a",
+      "component_type": "input_text_line",
+      "name": "owners_title_insurance_policy_payer_split",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": "parent.owners_title_insurance_policy_payer.value === 'both'",
+      "default_value": "50/50",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe how the title insurance cost will be split",
+      "fields": [
+        {
+          "id": "c7b903f9-3c96-43ef-a8a7-8cc65f145515",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter cost split details (e.g., 50/50)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

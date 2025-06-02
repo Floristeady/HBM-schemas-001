@@ -1,0 +1,164 @@
+{
+  "screen_template_id": "d48b7b67-3aba-4e08-941e-40c14a94ae38",
+  "name": "listing_type",
+  "state": "draft",
+  "title": "Is this property for sale by owner?",
+  "label": "Listing Type",
+  "description": "It's important to know if the property is being sold through a real estate agent or directly by the seller.",
+  "stage": "basics",
+  "section": "your_property",
+  "scope": {},
+  "tips": "Understanding how the property is listed can affect the negotiation process and required documentation.",
+  "tip_links": {},
+  "small_print": "Your selection may affect certain disclosure requirements and transaction procedures under applicable real estate laws.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "LISTING-TYPE-2024-001",
+    "notes": "Critical field for determining transaction flow and documentation requirements"
+  },
+  "components": {
+    "listing_type": {
+      "id": "c40ecc7b-aff7-4738-b2b1-56f654bf29a6",
+      "component_type": "select_single_cards",
+      "name": "listing_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select how the property is being listed",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "5be18388-e820-4727-a77d-c230b202480e",
+          "component_type": "select_card",
+          "name": "listing_type_agent",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": true,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select listing type Agent",
+          "fields": [
+            {
+              "id": "216f0cc0-c325-4672-8357-0a3a0ede1080",
+              "name": "label",
+              "label": null,
+              "value": "Listed: Agent"
+            },
+            {
+              "id": "ae1c36d9-2501-4037-bd29-f79f875836f1",
+              "name": "description",
+              "label": null,
+              "value": "Listed by a Real Estate Broker"
+            },
+            {
+              "id": "3a26c1e1-505d-409e-a6f6-7a39e36c6e66",
+              "name": "image",
+              "label": null,
+              "value": "10_agent.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "9b83f94e-db9e-48b4-b2ff-38ff0b272bb5",
+                "condition": {
+                  "id": "4b9707f6-994f-43a9-93ea-369967d8fa58",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ec42be60-b231-4659-8407-2e62c9504408",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "listing_type_agent",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4817b34f-80d8-44b5-aa93-7f3dbb689ee9",
+          "component_type": "select_card",
+          "name": "listing_type_fsbo",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select listing type FSBO",
+          "fields": [
+            {
+              "id": "550b4a2b-fd0a-4d9b-9b8c-2c7b58f20fe5",
+              "name": "label",
+              "label": null,
+              "value": "Listed: FSBO"
+            },
+            {
+              "id": "e7b05428-4651-47ee-a47c-2b816870e048",
+              "name": "description",
+              "label": null,
+              "value": "For Sale By Owner"
+            },
+            {
+              "id": "dd571e3c-0a1a-4024-94c0-f5a9b0e93423",
+              "name": "image",
+              "label": null,
+              "value": "11_person_FSBO.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "59a05558-0dc5-4bbb-a075-4fcc27fc2d32",
+                "condition": {
+                  "id": "4b9707f6-994f-43a9-93ea-369967d8fa58",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "43737c67-5a59-4872-adaf-de8772ed4716",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "listing_type_fsbo",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

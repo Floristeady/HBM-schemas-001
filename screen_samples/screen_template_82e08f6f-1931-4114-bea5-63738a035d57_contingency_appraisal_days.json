@@ -1,0 +1,71 @@
+{
+  "screen_template_id": "82e08f6f-1931-4114-bea5-63738a035d57",
+  "name": "contingency_appraisal_days",
+  "state": "draft",
+  "title": "Within how many days after Acceptance will the Appraisal Contingency be removed?",
+  "label": "Appraisal Contingency Days",
+  "description": "This applies because you chose not to waive this contingency.",
+  "stage": "standard",
+  "section": "contingencies",
+  "scope": {
+    "contingency_appraisal": true
+  },
+  "tips": "Consider typical appraisal completion times when setting this deadline. The standard is 17 days.",
+  "tip_links": {},
+  "small_print": "The appraisal contingency removal date should allow sufficient time for the appraisal to be completed and reviewed. Confirm with your Lender what their timeline is as far as receiving and reviewing an appraisal report.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "APPRAISAL-CONTINGENCY-DAYS-2024-001",
+    "notes": "Days until appraisal contingency removal"
+  },
+  "components": {
+    "contingency_appraisal_days": {
+      "id": "b62deea3-0f33-4458-a74d-32d6572cc4ec",
+      "component_type": "input_number",
+      "name": "contingency_appraisal_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": 17,
+      "suggested": {
+        "max": 21,
+        "hint": "Anything over 21 days may be considered too long and could affect your offer's competitiveness.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 99
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days for appraisal contingency removal",
+      "fields": [
+        {
+          "id": "a17f7577-dd78-4273-b5ed-b5cd49e6241d",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (up to 22)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

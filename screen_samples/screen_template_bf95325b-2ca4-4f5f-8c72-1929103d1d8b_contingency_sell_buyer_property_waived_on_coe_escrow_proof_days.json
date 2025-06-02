@@ -1,0 +1,71 @@
+{
+  "screen_template_id": "bf95325b-2ca4-4f5f-8c72-1929103d1d8b",
+  "name": "contingency_sell_buyer_property_waived_on_coe_escrow_proof_days",
+  "state": "draft",
+  "title": "Proof of Escrow",
+  "label": "Proof of Escrow",
+  "description": "Within how many days after acceptance of this offer will you provide proof of escrow to the seller?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_coe_in_escrow": true
+  },
+  "tips": "Make sure you remember if referencing business days, Saturdays or Sundays are not included.",
+  "tip_links": {},
+  "small_print": "Failure to provide proof of escrow within the specified timeframe may affect your contingency rights.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ESCROW-PROOF-DAYS-2024-001",
+    "notes": "Days to provide proof of escrow"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_coe_escrow_proof_days": {
+      "id": "27f2ab02-b78e-4d89-a764-b710d564be97",
+      "component_type": "input_number",
+      "name": "contingency_sell_buyer_property_waived_on_coe_escrow_proof_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 2,
+      "value": null,
+      "suggested": {
+        "min": 1,
+        "max": 2,
+        "hint": "It is important that you deliver this proof promptly to show good faith to the seller.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 2,
+        "max_value": 5
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0
+      },
+      "tooltip": "Enter the number of days",
+      "fields": [
+        {
+          "id": "1726eba3-29cc-4d3f-9361-130bbdac2608",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (minimum 2)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

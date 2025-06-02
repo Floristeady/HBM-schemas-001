@@ -1,0 +1,139 @@
+{
+  "screen_template_id": "5a568203-754d-46cd-ace5-cfea8bdcc63b",
+  "name": "buyer2_no_entity",
+  "state": "draft",
+  "title": "Will there be a second buyer signer to the purchase agreement?",
+  "label": "Second Buyer",
+  "description": "Each buyer must sign the purchase agreement to complete the transaction.",
+  "stage": "final_details",
+  "section": "buyers",
+  "scope": {
+    "buyer_entity_no": true
+  },
+  "tips": "",
+  "tip_links": {},
+  "small_print": "",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "2ND-BUYER-SIGNER-2024-001",
+    "notes": "Is there a second buyer signer?"
+  },
+  "components": {
+    "buyer2_no_entity": {
+      "id": "1d17b622-8cbd-45ff-ba1b-52afe751d029",
+      "component_type": "select_single_cards",
+      "name": "buyer2_no_entity",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": false,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Choose whether there is a second Buyer signer.",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "7fc1b17f-57b5-41c8-a7c3-bfc965b813c9",
+          "component_type": "select_card",
+          "name": "buyer2_no_entity_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Yes, there's another Buyer signer",
+          "fields": [
+            {
+              "id": "9a799a19-61a8-4a0e-8ab1-9195cbd0cd28",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "448eca4e-6dd2-4620-a612-102deb137765",
+              "name": "description",
+              "label": null,
+              "value": "There is a second Buyer signer"
+            },
+            {
+              "id": "4a4da4f0-eacb-44ae-8696-7bdcfc32ec88",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "49503bc6-71a5-4530-b0ca-4c1233d261c8",
+                "condition": {
+                  "id": "ee3c8589-9172-40bf-ac49-f852c0c1bee7",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "1df83706-4f21-457a-8221-bc486d55734f",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "buyer2_no_entity",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0a61935e-9119-4b24-8e34-46abfe142b0d",
+          "component_type": "select_card",
+          "name": "buyer2_no_entity_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "No other Buyer signer",
+          "fields": [
+            {
+              "id": "1b975c68-ffe8-4350-abc0-60daaaf12fa9",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "d7820845-1d92-4c7c-a6b3-bb439f9694c5",
+              "name": "description",
+              "label": null,
+              "value": "I'm the only Buyer signer"
+            },
+            {
+              "id": "be47a98e-4eb5-46b3-96be-f737dfbf1f7b",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

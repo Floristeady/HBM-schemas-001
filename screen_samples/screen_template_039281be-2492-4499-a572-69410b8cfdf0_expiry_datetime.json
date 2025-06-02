@@ -1,0 +1,64 @@
+{
+  "screen_template_id": "039281be-2492-4499-a572-69410b8cfdf0",
+  "name": "expiry_datetime",
+  "state": "draft",
+  "title": "On what date and time would you like the offer to expire?",
+  "label": "Offer Expiry Date",
+  "description": "Make sure to give enough time for the seller to review.",
+  "stage": "final_details",
+  "section": "offer_expiration",
+  "scope": {
+    "three_day_expiry_no": true
+  },
+  "tips": "Choose a date and time that allows sufficient review time but maintains urgency in your offer.",
+  "tip_links": {},
+  "small_print": "The offer will automatically expire at the specified date and time if not accepted.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "EXPIRY-DATETIME-2024-001",
+    "notes": "Offer expiration date and time"
+  },
+  "components": {
+    "expiry_datetime": {
+      "id": "a3478a7c-04b7-4a37-9acc-021170cf0ae9",
+      "component_type": "pick_date_time",
+      "name": "expiry_datetime",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "datetime",
+        "required": true
+      },
+      "formatting": {
+        "type": "datetime",
+        "mask": "MM/DD/YYYY HH:mm"
+      },
+      "tooltip": "Select expiration date and time",
+      "fields": [
+        {
+          "id": "881fca63-f6cb-41d1-8d33-555b73fa0380",
+          "name": "placeholder",
+          "label": null,
+          "value": "Select date and time",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

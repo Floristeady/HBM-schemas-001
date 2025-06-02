@@ -1,0 +1,66 @@
+{
+  "screen_template_id": "ef5c9132-9fbe-441a-83ba-4fc1bd7e2e80",
+  "name": "escrow_company",
+  "state": "draft",
+  "title": "What is the name of the escrow company?",
+  "label": "Escrow Company",
+  "description": "If you don't have an escrow company you'd like to use, you can skip this and fill it in later or let the seller choose.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "Choose a licensed escrow company that has experience with residential real estate transactions.",
+  "tip_links": {},
+  "small_print": "The escrow company must be licensed to operate in California. In most transactions, the escrow company is buyer's choice. However, the seller or seller's agent may designate an escrow company at the time of listing to provide the required disclosures, such as the Preliminary Title Report.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ESCROW-COMPANY-2024-001",
+    "notes": "Selection of escrow company"
+  },
+  "components": {
+    "escrow_company": {
+      "id": "3b700cd0-f3ab-47de-8a55-86f4964af48d",
+      "component_type": "input_text_line",
+      "name": "escrow_company",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is optional, so you may leave it empty. However, filling it out could strengthen your offer and expedite its processing.",
+        "warning": ""
+      },
+      "validation": {
+        "min_length": 1,
+        "max_length": 150,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the name of the escrow company",
+      "fields": [
+        {
+          "id": "cc017281-428e-43e0-85e2-b800c5cce5bc",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter escrow company name (optional)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

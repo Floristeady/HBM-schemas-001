@@ -1,0 +1,202 @@
+{
+  "screen_template_id": "2417bf0d-001f-4b72-99eb-774c6483135e",
+  "name": "additional_report_payer",
+  "state": "draft",
+  "title": "Who will pay for the additional report?",
+  "label": "Report Payer",
+  "description": "If you choose Both, you will need to specify how the cost is split.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {
+    "additional_report": true
+  },
+  "tips": "Any additional Buyer Inspections are typically at the Buyer expense, unless already provided by the Seller.",
+  "tip_links": {},
+  "small_print": "Payment responsibility should be clearly defined to avoid disputes.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ADDITIONAL-REPORT-PAYER-2024-001",
+    "notes": "Payment responsibility for additional reports"
+  },
+  "components": {
+    "additional_report_payer": {
+      "id": "6c64cd96-a29a-4821-be9b-0e7ed39d06cf",
+      "component_type": "select_single_dropdown",
+      "name": "additional_report_payer",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will pay for the report",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "73fa5ec0-dbf6-44a3-b733-71aac8709542",
+          "component_type": "select_option",
+          "name": "additional_report_payer_seller",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Seller pays for report",
+          "fields": [
+            {
+              "id": "a2ce8ded-2c53-4784-8e64-57405be9f111",
+              "name": "label",
+              "label": null,
+              "value": "Seller"
+            },
+            {
+              "id": "1a91c0cf-fd14-4c8e-80f6-099ee0eaeddf",
+              "name": "description",
+              "label": null,
+              "value": "Seller pays full cost"
+            },
+            {
+              "id": "449b76e2-e306-414c-ae64-12151c545344",
+              "name": "image",
+              "label": null,
+              "value": "25_seller.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "cb4accef-f7d8-471f-b19e-2b2c270a6b0b",
+          "component_type": "select_option",
+          "name": "additional_report_payer_buyer",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Buyer pays for report",
+          "fields": [
+            {
+              "id": "38b7a8be-5fae-47f6-a22e-964f64cc2829",
+              "name": "label",
+              "label": null,
+              "value": "Buyer"
+            },
+            {
+              "id": "c71ef80e-3d5b-42bc-a7f9-5fc655ea295b",
+              "name": "description",
+              "label": null,
+              "value": "Buyer pays full cost"
+            },
+            {
+              "id": "0a74378f-46ee-45b9-bc71-7d8ff438bee5",
+              "name": "image",
+              "label": null,
+              "value": "26_buyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "bc0a2737-e62c-48f2-961d-5fd3de772b0f",
+          "component_type": "select_option",
+          "name": "additional_report_payer_both",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Split cost between buyer and seller",
+          "fields": [
+            {
+              "id": "402f1f89-ddaa-4a19-9d18-de76c44581f9",
+              "name": "label",
+              "label": null,
+              "value": "Both"
+            },
+            {
+              "id": "154114e1-b319-4b2b-af43-16ce86c36bea",
+              "name": "description",
+              "label": null,
+              "value": "Split cost between both parties"
+            },
+            {
+              "id": "ad75238d-41a2-43b5-8b47-c7336e547152",
+              "name": "image",
+              "label": null,
+              "value": "27_both_sellerbuyer.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    },
+    "additional_report_payer_split": {
+      "id": "4e60d128-25d1-4acc-837b-6912389e9952",
+      "component_type": "input_text_line",
+      "name": "additional_report_payer_split",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": "parent.additional_report_payer.value === 'both'",
+      "default_value": "50/50",
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "text",
+        "min_length": 1,
+        "max_length": 100,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the cost split details",
+      "fields": [
+        {
+          "id": "0ea4b4c2-4891-453f-896b-1fc1f54c4461",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Describe how the cost will be split (e.g., 50/50)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

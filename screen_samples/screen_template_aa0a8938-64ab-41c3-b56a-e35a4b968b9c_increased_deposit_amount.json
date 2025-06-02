@@ -1,0 +1,106 @@
+{
+  "screen_template_id": "aa0a8938-64ab-41c3-b56a-e35a4b968b9c",
+  "name": "increased_deposit_amount",
+  "state": "draft",
+  "title": "How much additional Earnest Money would you like to give?",
+  "label": "2nd Deposit Amount",
+  "description": "Please enter an amount.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "increased_deposit": true
+  },
+  "tips": "A larger earnest money deposit demonstrates your commitment to the seller.",
+  "tip_links": {},
+  "small_print": "This additional deposit will be combined with your initial earnest money deposit.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "INCREASED-DEPOSIT-AMT-2024-001",
+    "notes": "Only shown if increased deposit is selected"
+  },
+  "components": {
+    "increased_deposit_amount": {
+      "id": "0ab01745-5bf4-4b0d-b3f3-3b07f1a63ffb",
+      "component_type": "input_currency",
+      "name": "increased_deposit_amount",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": 0,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "currency",
+        "required": true
+      },
+      "formatting": {
+        "type": "currency",
+        "alignment": "right",
+        "mask": "#,###.##"
+      },
+      "tooltip": "Enter the additional earnest money amount",
+      "fields": [
+        {
+          "id": "cd7ee31d-143e-478d-a3f1-b479902a4184",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter amount",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    },
+    "increased_deposit_percent": {
+      "id": "59787416-2a96-41f3-a2e1-155bd8472056",
+      "component_type": "input_percentage",
+      "name": "increased_deposit_percent",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": false,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": "(parent.increased_deposit_amount.value / globals.purchase_price) * 100",
+      "is_value_dynamic": true,
+      "suggested": null,
+      "validation": {
+        "value_type": "percentage",
+        "required": false
+      },
+      "formatting": {
+        "type": "percentage",
+        "alignment": "right",
+        "mask": "#,###.##%"
+      },
+      "tooltip": "Percentage of purchase price",
+      "fields": [
+        {
+          "id": "f2bd0261-f001-48ce-aa37-9bc1ee326d78",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "0",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

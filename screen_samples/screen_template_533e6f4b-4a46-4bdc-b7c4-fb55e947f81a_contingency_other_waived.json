@@ -1,0 +1,69 @@
+{
+  "screen_template_id": "533e6f4b-4a46-4bdc-b7c4-fb55e947f81a",
+  "name": "contingency_other_waived",
+  "state": "draft",
+  "title": "Are there are any other contingencies not already covered that you'd like to waive?",
+  "label": "Waived Items",
+  "description": "Please name and/or describe them.",
+  "stage": "competitive",
+  "section": "contingencies",
+  "scope": {
+    "contingency_all_waived_no": true
+  },
+  "tips": "Contingencies not specifically covered in this purchase agreement can be added here. Examples could be in-home health care provider review, new employment acceptance, etc.",
+  "tip_links": {},
+  "small_print": "Waiving contingencies can make your offer more competitive but also increases your risk.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "OTHER-CONTINGENCIES-2024-001",
+    "notes": "Additional waived contingencies"
+  },
+  "components": {
+    "contingency_other_waived": {
+      "id": "75c44b17-e4e5-4b2e-b2cb-8caf91f1f33a",
+      "component_type": "input_text_area",
+      "name": "contingency_other_waived",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": {
+        "value": "empty",
+        "hint": "This field is optional, so you may leave it empty. Any input you provide will be reviewed by our Smart Buy Team and might prompt us to ask for a bit more information.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 0,
+        "max_length": 500
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Add contingencies to waive",
+      "fields": [
+        {
+          "id": "8463e8f1-38c9-474c-a7c0-ebf0be36057e",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter contingencies to waive (one per line)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

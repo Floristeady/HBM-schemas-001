@@ -1,0 +1,148 @@
+{
+  "screen_template_id": "e7358a01-f226-4932-88d4-5cec81cea202",
+  "name": "escalation_clause",
+  "state": "draft",
+  "title": "Would you like to include a Purchase Price Escalation Clause in your offer?",
+  "label": "Escalation Clause",
+  "description": "An escalation clause potentially increases the price you end up paying for the property.",
+  "stage": "competitive",
+  "section": "your_property",
+  "scope": {},
+  "tips": "In hot real estate markets, including an escalation clause can make your offer more attractive, however it does place more financial responsibility on the Buyer and must be considered carefully.",
+  "tip_links": {
+    "Understanding Escalation Clauses": {
+      "label": "Understanding Escalation Clauses",
+      "url": "https://www.homebuyme.com/insights/understanding-escalation-clauses-in-a-home-offer-how-they-work-and-what-to-consider/"
+    }
+  },
+  "small_print": "By including this term in the Agreement, you agree to have your purchase price increased if the Seller receives an equal or higher offer from another buyer. This does not assure that the competing offer used to establish your purchase price will, in all ways, be comparable to yours. Your are cautioned to offer no more than you are willing to pay for the Property. Your are further advised that Seller or Seller’s Agent(s) may disclose the terms of your offer to others.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ESCALATION-2024-001",
+    "notes": "Triggers escalation clause details if selected"
+  },
+  "components": {
+    "escalation_clause": {
+      "id": "0ea20754-9560-45c8-b299-4885cc1a68bf",
+      "component_type": "select_single_cards",
+      "name": "escalation_clause",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": false,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Choose whether to include an escalation clause",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "e8037cb3-f2f9-4907-83bd-289a3553e7db",
+          "component_type": "select_card",
+          "name": "escalation_clause_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Include escalation clause",
+          "fields": [
+            {
+              "id": "513a042c-a7fb-4215-8468-c9a2b27eea11",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "2298d6f2-f7ba-4dfe-b60e-37dabba30915",
+              "name": "description",
+              "label": null,
+              "value": "I'm willing to increase my price to beat other buyers"
+            },
+            {
+              "id": "b61bfa23-8930-4bd3-9da4-5731680b748a",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "5ada1b47-be6e-48fc-80f1-54913e9f8f4a",
+                "condition": {
+                  "id": "223c4b9b-f449-4219-9975-7c6bd91968fe",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "7c0dbc55-76f8-437b-9855-04dd42c9bef2",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "escalation_clause",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ad329a35-9002-4c37-a27a-18170bc247f6",
+          "component_type": "select_card",
+          "name": "escalation_clause_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No escalation clause",
+          "fields": [
+            {
+              "id": "9e7f0830-f4e7-44d2-85aa-04b9a23567eb",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "489d7cc1-c183-4986-9117-d56e0537a7dd",
+              "name": "description",
+              "label": null,
+              "value": "I'm happy with my price"
+            },
+            {
+              "id": "a6870d63-1468-4133-872d-99ca0b390347",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

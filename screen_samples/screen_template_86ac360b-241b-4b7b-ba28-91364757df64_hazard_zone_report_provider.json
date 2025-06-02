@@ -1,0 +1,67 @@
+{
+  "screen_template_id": "86ac360b-241b-4b7b-ba28-91364757df64",
+  "name": "hazard_zone_report_provider",
+  "state": "draft",
+  "title": "What company will provide the Natural Hazard Zone Disclosure Report(s)?",
+  "label": "Report Provider",
+  "description": "If you don't know, leave it blank for the seller to fill in.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "Natural hazard disclosure reports are typically provided by specialized companies.",
+  "tip_links": {},
+  "small_print": "The provider should be licensed to provide natural hazard disclosure reports in California.",
+  "is_required": false,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "HAZARD-ZONE-PROVIDER-2024-001",
+    "notes": "Selection of natural hazard report provider"
+  },
+  "components": {
+    "hazard_zone_report_provider": {
+      "id": "aeebd7db-9d4c-4f85-b5eb-6fa97fa8c116",
+      "component_type": "input_text_line",
+      "name": "hazard_zone_report_provider",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is optional, so you may leave it empty. However, filling it out could strengthen your offer and expedite its processing.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "min_length": 0,
+        "max_length": 1000,
+        "required": true
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Enter the name of the hazard report provider",
+      "fields": [
+        {
+          "id": "67928e36-8277-4db7-90ca-5e38f878bc60",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter provider name (optional)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

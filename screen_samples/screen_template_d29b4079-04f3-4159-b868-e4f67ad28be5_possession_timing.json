@@ -1,0 +1,146 @@
+{
+  "screen_template_id": "d29b4079-04f3-4159-b868-e4f67ad28be5",
+  "name": "possession_timing",
+  "state": "draft",
+  "title": "When would you like to take possession of the property?",
+  "label": "Possession",
+  "description": "Typically the buyer takes possession of the property upon Notice of Recordation.",
+  "stage": "final_details",
+  "section": "possession",
+  "scope": {},
+  "tips": "",
+  "tip_links": {
+    "All About Possession": {
+      "label": "All About Possession",
+      "url": "https://www.homebuyme.com/insights/time-of-possession-understanding-when-the-buyer-takes-control-of-the-property/"
+    }
+  },
+  "small_print": "The date and time of possession shall be as set forth in the purchase agreement and escrow instructions, and possession shall be subject to the rights of any tenants or other parties in possession.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "POSSESSION-ON-RECORDATION-2024-001",
+    "notes": "Take possession upon Notice of Recordation"
+  },
+  "components": {
+    "possession_timing": {
+      "id": "c715ffed-3542-4f47-9d2e-dcbf8805a8f1",
+      "component_type": "select_single_cards",
+      "name": "possession_timing",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select when you want to take possession",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "c28f5118-9ef5-48c8-8726-0daf371f1e00",
+          "component_type": "select_card",
+          "name": "possession_on_recordation",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Take possession upon Notice of Recordation",
+          "fields": [
+            {
+              "id": "2617e101-37a0-4b21-92e9-1de0b3f69d2d",
+              "name": "label",
+              "label": null,
+              "value": "Take possession upon Notice of Recordation"
+            },
+            {
+              "id": "dbb40f76-d5f2-4d1d-b56a-d25c2c30552f",
+              "name": "description",
+              "label": null,
+              "value": "I'll take possession when I receive notice that recordation has occurred"
+            },
+            {
+              "id": "05dab924-802d-4618-aebf-b8f8776c5792",
+              "name": "image",
+              "label": null,
+              "value": "34_house_with_doc.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "55a4e4b5-624e-42bf-92e4-8946c6391db0",
+          "component_type": "select_card",
+          "name": "possession_on_coe",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": false,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Take possession on Close of Escrow at a specific hour",
+          "fields": [
+            {
+              "id": "dc334a46-12a7-467d-8ab6-a26458a64e1d",
+              "name": "label",
+              "label": null,
+              "value": "Take possession on Close of Escrow at a specific hour"
+            },
+            {
+              "id": "a7d2db80-d3e7-496e-b1b1-d1ba037ebfe8",
+              "name": "description",
+              "label": null,
+              "value": "I'll take possession at the Close of Escrow at a specific time"
+            },
+            {
+              "id": "c2437b4a-639f-4448-8331-ce701917b5c4",
+              "name": "image",
+              "label": null,
+              "value": "34_house_with_doc.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "43b5e4b7-b0b6-47b7-bcd3-b2d51fa84573",
+                "condition": {
+                  "id": "40f377b0-fe2e-47d8-8775-6a89b519b464",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "a1e70347-fd20-42dc-a005-2ed88ee352be",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "possession_on_coe",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

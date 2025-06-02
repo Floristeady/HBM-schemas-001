@@ -1,0 +1,145 @@
+{
+  "screen_template_id": "7579a2a5-c620-48f1-b9da-20613043ae65",
+  "name": "buyer_type",
+  "state": "draft",
+  "title": "Investment Buyer Type",
+  "label": "Buyer Type",
+  "description": "Will you be buying this investment property as a person or person(s) or as an entity/organization?",
+  "stage": "basics",
+  "section": "your_property",
+  "scope": {
+    "occupancy_type_investment": true
+  },
+  "tips": "When buying an investment property, you can either buy as individuals or under a business or other entity.",
+  "tip_links": {},
+  "small_print": "Your selection may affect certain disclosure requirements and transaction procedures under applicable real estate laws.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ENTITY-BUYER-TYPE-2024-001",
+    "notes": "Critical field for determining transaction flow and documentation requirements"
+  },
+  "components": {
+    "buyer_type": {
+      "id": "e82eb0e1-3a31-426f-8ce0-6437eeb698e0",
+      "component_type": "select_single_cards",
+      "name": "buyer_type",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select who will be buying the property",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "1aa24b3c-9033-4e7c-97c2-a539c5dcd60f",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_individuals",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select buyer type Individual(s)",
+          "fields": [
+            {
+              "id": "2a1f2618-6001-46b6-bb1c-9a6ace11ea1c",
+              "name": "label",
+              "label": null,
+              "value": "Individual(s)"
+            },
+            {
+              "id": "8194a6a4-28f0-4fc7-a9f1-c94967746a86",
+              "name": "description",
+              "label": null,
+              "value": "Buying the property as a person or persons"
+            },
+            {
+              "id": "d3282e3e-f856-47dd-a981-748f4ed3eaf9",
+              "name": "image",
+              "label": null,
+              "value": "37_representative.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "62c133cb-3878-445a-a277-0cd40db0678e",
+          "component_type": "select_card",
+          "name": "entity_buyer_type_individuals_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Select buyer type Entity",
+          "fields": [
+            {
+              "id": "9d8e7d74-17ea-440b-9fe1-b15185a0014d",
+              "name": "label",
+              "label": null,
+              "value": "Entity"
+            },
+            {
+              "id": "4d3682b6-d986-48e0-a0de-f83152829699",
+              "name": "description",
+              "label": null,
+              "value": "Buying the property as a business or other organization"
+            },
+            {
+              "id": "73bcb385-635e-4498-8756-de23bc8734eb",
+              "name": "image",
+              "label": null,
+              "value": "38_entity.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "c44b8336-f242-4a3a-b5db-ab25a3bd2790",
+                "condition": {
+                  "id": "03a74fc2-a987-4d3d-822a-5960a52b0bcf",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "117a823b-0264-4f1b-93ee-6847e941b1f8",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "entity_buyer_type_individuals_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

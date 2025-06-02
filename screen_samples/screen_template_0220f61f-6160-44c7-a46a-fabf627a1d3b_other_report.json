@@ -1,0 +1,168 @@
+{
+  "screen_template_id": "0220f61f-6160-44c7-a46a-fabf627a1d3b",
+  "name": "other_report",
+  "state": "draft",
+  "title": "Are there any other reports you'd like to include as part of the Hazard Report?",
+  "label": "Other Report",
+  "description": "You'll need to describe these reports for the seller.",
+  "stage": "competitive",
+  "section": "costs",
+  "scope": {},
+  "tips": "Additional reports may be needed based on property location or specific concerns.",
+  "tip_links": {},
+  "small_print": "Additional reports may incur extra costs and time to complete.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "OTHER-REPORT-2024-001",
+    "notes": "Selection for additional hazard reports"
+  },
+  "components": {
+    "other_report": {
+      "id": "ccc60e2b-9f87-4a0f-8064-2ce4681ba6ee",
+      "component_type": "select_single_cards",
+      "name": "other_report",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "other_report_no",
+        "hint": "Adding additional reports will trigger review by our Smart Buy Team.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether to include additional reports",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "91222e7c-fd1f-4933-93fd-cad0d3d6559f",
+          "component_type": "select_card",
+          "name": "other_report_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Include additional reports",
+          "fields": [
+            {
+              "id": "e59ef572-fb82-4a1f-b66e-7e4837bcd557",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "e19eff43-67a0-4ab4-bdb8-95856f0173b9",
+              "name": "description",
+              "label": null,
+              "value": "Include additional reports with hazard report"
+            },
+            {
+              "id": "b4b96a38-6d0c-45d7-866c-b8314c43737a",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "481e0fc2-7058-4b92-85a0-6342c5de1563",
+                "condition": {
+                  "id": "eb8ea02d-563d-4d59-9fb7-f9c0cd34e494",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ec7709e8-6262-4caa-a849-eef55c51f2eb",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "other_report",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "78f4191d-0a3d-4954-9bb6-ded1fa1a0947",
+          "component_type": "select_card",
+          "name": "other_report_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No additional reports needed",
+          "fields": [
+            {
+              "id": "a0e68cd6-bd9d-4ded-a516-1af14c4ae12a",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "a62224cd-b9b7-47ff-817a-a6f0dcc86725",
+              "name": "description",
+              "label": null,
+              "value": "No additional reports needed"
+            },
+            {
+              "id": "46534d01-358c-4836-80a3-44baf70d16cb",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "2788556d-33a5-41e1-a2c0-c1d614b1161b",
+                "condition": {
+                  "id": "bddf51a8-2a1c-45c1-96b2-56a87eb73ef4",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "200cbf5f-8087-4b9e-8fa5-0264dda3a005",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "other_report_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "screen_template_id": "65b92ee0-f94c-405f-8f00-1d93e9dab1f7",
+  "name": "down_payment_verification",
+  "state": "draft",
+  "title": "Do you want to include with your offer a verification of funds to cover your down payment and closing costs?",
+  "label": "Down Payment Verification",
+  "description": "It's alright if you don't have the documents ready to upload now.",
+  "stage": "competitive",
+  "section": "funds_and_financing",
+  "scope": {
+    "funds_type_loan": true
+  },
+  "tips": "Providing proof of funds for your down payment can strengthen your offer.",
+  "tip_links": {
+    "Understanding Funds Verification": {
+      "label": "Understanding Funds Verification",
+      "url": "https://www.homebuyme.com/insights/funds-verification-why-it-matters-for-cash-purchases-down-payments-and-deposits/"
+    }
+  },
+  "small_print": "Verification helps demonstrate your ability to complete the purchase.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "DOWN-PAYMENT-VERIFY-2024-001",
+    "notes": "Verification choice for down payment"
+  },
+  "components": {
+    "down_payment_verification": {
+      "id": "a3374abe-fd86-4540-b1b3-bd8c696105c1",
+      "component_type": "select_single_cards",
+      "name": "down_payment_verification",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": false,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "down_payment_verification_docs",
+        "hint": "Proof of funds is highly recommended to help the seller understand your ability to complete this purchase.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether you want to include proof of funds now",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "3229c2d7-599f-4e6d-ac41-7900261272db",
+          "component_type": "select_card",
+          "name": "down_payment_verification_docs",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Yes, I'll provide verification documents",
+          "fields": [
+            {
+              "id": "9010d9a6-0fc8-432a-8014-e66b999055b5",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "d5656f82-1ab4-4090-8b88-39b5681c92d6",
+              "name": "description",
+              "label": null,
+              "value": "I'll include proof with my offer"
+            },
+            {
+              "id": "13afaa1e-5f4b-4c01-9eb1-3b30b15afa32",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "312512e1-3bf4-4b3a-9f4d-0a417fc30977",
+                "condition": {
+                  "id": "c31bbcce-1a67-4032-aecf-c07ce99c3dd8",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "98d6e8dd-1386-4d3b-86c0-6bce48c23dc4",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "down_payment_verification_docs",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "772f193f-c330-43e5-b689-ad28e07c38d7",
+          "component_type": "select_card",
+          "name": "down_payment_verification_no_docs",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "No, I'll verify funds later",
+          "fields": [
+            {
+              "id": "2d04b36c-e6ba-4fdd-bb5d-5e5f761da7d7",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "90218aed-0a6c-4c02-9209-12121d7601be",
+              "name": "description",
+              "label": null,
+              "value": "I'll provide proof after offer acceptance"
+            },
+            {
+              "id": "60833c86-27f0-4241-b78d-56e02789f876",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "4b9666f9-7d45-4a22-a4c5-52a684c31186",
+                "condition": {
+                  "id": "2f1c73c8-61e3-4db0-9780-c3048566bad6",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "16b3e2eb-a4cd-45ea-b11a-8125681f904a",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "down_payment_verification_no_docs",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

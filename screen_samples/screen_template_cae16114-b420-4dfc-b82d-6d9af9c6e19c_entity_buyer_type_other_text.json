@@ -1,0 +1,69 @@
+{
+  "screen_template_id": "cae16114-b420-4dfc-b82d-6d9af9c6e19c",
+  "name": "entity_buyer_type_other_text",
+  "state": "draft",
+  "title": "Other type of entity description.",
+  "label": "Other Entity",
+  "description": "Please describe the Other type of entity that will be buying the property.",
+  "stage": "basics",
+  "section": "funds_and_financing",
+  "scope": {
+    "entity_buyer_type_other": true
+  },
+  "tips": "Since this is not a traditional type of business entity please describe fully.",
+  "tip_links": {},
+  "small_print": "With other entities (Trusts, etc.), make sure to include the date of formation. For example: Trust, date of formation May 26, 2021",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "BUYER-TYPE-ENTITIES-2024-001",
+    "notes": "Description of other entity types"
+  },
+  "components": {
+    "entity_buyer_type_other_text": { 
+      "id": "46ab2d81-4898-4aa7-8516-5901d2a8d0d0",
+      "component_type": "input_text_area",
+      "name": "entity_buyer_type_other_text",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": {
+        "value": "not_empty",
+        "hint": "This field is required. Please describe the entity.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "text",
+        "required": true,
+        "min_length": 1,
+        "max_length": 500
+      },
+      "formatting": {
+        "type": "text"
+      },
+      "tooltip": "Describe your buyer entity",
+      "fields": [
+        {
+          "id": "13adeb66-41db-4714-bfdf-06fcfc588607",
+          "name": "placeholder",
+          "label": null,
+          "default_value": "Enter details about your buyer entity",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

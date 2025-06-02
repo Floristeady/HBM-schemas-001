@@ -1,0 +1,140 @@
+{
+  "screen_template_id": "0a604661-6179-4215-8f8f-c33bf5a58279",
+  "name": "contingency_sell_buyer_property_waived_on_contract_mls",
+  "state": "draft",
+  "title": "Multiple Listing Service listing",
+  "label": "MLS Listing",
+  "description": "Is your property listed (or will it be listed) on the MLS in the geographic location where your property is located?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_listing_broker": true,
+    "contingency_sell_buyer_property_waived_on_contract_listing_no_broker": true
+  },
+  "tips": "Listing your property on the MLS provides maximum exposure to potential buyers.",
+  "tip_links": {},
+  "small_print": "Only licensed real estate agents and brokers can list directly on the MLS. Sellers who want to list on the MLS without a real estate agent in California must use a flat fee MLS service.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "MLS-LISTING-2024-001",
+    "notes": "Selection for MLS listing status"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_contract_mls": {
+      "id": "d8c52b4b-8bdd-4b2c-a0f1-493d10b70807",
+      "component_type": "select_single_cards",
+      "name": "contingency_sell_buyer_property_waived_on_contract_mls_yes",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether your property will be listed on MLS",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "76c91e2e-60a5-400c-b361-eec6f9a64ae0",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_contract_mls",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "Property will be listed on MLS",
+          "fields": [
+            {
+              "id": "a70e0a6d-da97-44f1-81cf-780c62594277",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "ffaa83eb-a1eb-434a-870e-387a2797810e",
+              "name": "description",
+              "label": null,
+              "value": "Will list on MLS"
+            },
+            {
+              "id": "e62765f1-a086-4a96-8c99-28c1200fc5a1",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "f1239140-dd37-4066-862c-47ed585586da",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_contract_mls_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "tooltip": "Property will not be listed on MLS",
+          "fields": [
+            {
+              "id": "6fd46e4f-b9ae-485d-813d-75517c36f5cf",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "d491b01d-f414-410c-81b7-37744eb71798",
+              "name": "description",
+              "label": null,
+              "value": "Will not list on MLS"
+            },
+            {
+              "id": "0dc77423-505d-4363-9968-c8b0fb26ccc4",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "a46b67ec-451b-4acb-9280-3042af779a7b",
+                "condition": {
+                  "id": "0c8106e1-579c-446b-a6f5-48172441bcd0",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "1693d52d-954d-404d-a652-b211d89c6bf5",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_contract_mls_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "screen_template_id": "fd96c115-be72-4161-9e67-59d3d2851f04",
+  "name": "contingency_sell_buyer_property_waived_on_contract_escrow_days",
+  "state": "draft",
+  "title": "Provide proof of contract for your property sale",
+  "label": "Proof of Escrow",
+  "description": "Within how many days after you sign a contract to sell your property will you provide proof of escrow to the seller?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_and_coe": true,
+    "contingency_sell_buyer_property_waived_on_contract": true
+  },
+  "tips": "The proof of escrow demonstrates your sale is progressing and shows good faith to the seller.",
+  "tip_links": {},
+  "small_print": "You must provide valid proof of escrow within the specified timeframe to maintain the contingency. It is not necessary to provide the full purchase agreement of your property. Instead, your lender may agree to provide verification of the purchase price and date of closing for you to show as proof of escrow.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "ESCROW-PROOF-DAYS-2024-001",
+    "notes": "Days to provide proof of escrow"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_contract_escrow_days": {
+      "id": "fb3a875b-ac4d-48ea-95cc-23e6900a0d94",
+      "component_type": "input_number",
+      "name": "contingency_sell_buyer_property_waived_on_contract_escrow_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 2,
+      "value": null,
+      "suggested": {
+        "min": 1,
+        "max": 2,
+        "hint": "It is important that you deliver this proof promptly to show good faith to the seller.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 10
+      },
+      "formatting": {
+        "type": "number",
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter the number of days to provide proof of escrow",
+      "fields": [
+        {
+          "id": "d7cf94df-8186-4e4d-8bc0-34e90696bf9b",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (minimum 2)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}

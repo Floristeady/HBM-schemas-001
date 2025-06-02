@@ -1,0 +1,161 @@
+{
+  "screen_template_id": "70088322-7d76-4807-b4fd-66ec5cfefdb0",
+  "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow",
+  "state": "draft",
+  "title": "Is the sale of your Property already in Escrow?",
+  "label": "Escrow Date",
+  "description": "If so, you'll need to enter in the Escrow Company name, Escrow number, and closing date.",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property_waived_on_contract_and_coe": true,
+    "contingency_sell_buyer_property_waived_on_coe": true
+  },
+  "tips": "Having your property already in escrow strengthens your offer position.",
+  "tip_links": {},
+  "small_print": "The Escrow company handling the closing of the existing property should have sent this information to you shortly after acceptance. If they have not, you will want to contact them to obtain this information immediately. All escrow information will be verified as part of the offer process.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "PROPERTY-ESCROW-2024-001",
+    "notes": "Status of property in escrow"
+  },
+  "components": {
+    "contingency_sell_buyer_property_waived_on_coe_in_escrow": {
+      "id": "2dbc4cf4-6a91-4030-9bcc-ae0907e403d4",
+      "component_type": "select_single_cards",
+      "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "value": null,
+      "default_value": false,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select whether your property is already in escrow",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "16560dfd-833e-4dc9-8380-bf165bee8033",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow_yes",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "default_value": false,
+          "is_visible": true,
+          "value": null,
+          "tooltip": "Property is in escrow",
+          "fields": [
+            {
+              "id": "ce4107fa-408e-4620-a74b-25b47300154b",
+              "name": "label",
+              "label": null,
+              "value": "Yes"
+            },
+            {
+              "id": "4c29b903-3156-4b33-8309-1d17419a2083",
+              "name": "description",
+              "label": null,
+              "value": "Property is in escrow"
+            },
+            {
+              "id": "e0618e3b-9587-4088-a30a-0aba3bade6c9",
+              "name": "image",
+              "label": null,
+              "value": "1_checkmark.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "116033cd-9643-47dd-973f-04c07310b7e3",
+                "condition": {
+                  "id": "b4c3efd6-d372-4376-bcf0-9427ce070825",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "35f42e7f-d45c-4302-8a55-013ec4f3a1a1",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2942a796-4c04-4374-9735-ecc7b157e854",
+          "component_type": "select_card",
+          "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow_no",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "tooltip": "Property is not in escrow",
+          "fields": [
+            {
+              "id": "0eb81779-d8c3-4e3b-9bdb-8ef44a40f18d",
+              "name": "label",
+              "label": null,
+              "value": "No"
+            },
+            {
+              "id": "e44e87cd-6419-4d77-97bc-1b6b117eecb1",
+              "name": "description",
+              "label": null,
+              "value": "Property is not in escrow"
+            },
+            {
+              "id": "c8f9abfc-af0c-42a1-9080-8ae0f460570c",
+              "name": "image",
+              "label": null,
+              "value": "2_notx.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "2ed42a9e-72d7-4876-af60-0117070bbcaf",
+                "condition": {
+                  "id": "e6f296d4-eb9a-438e-be1a-32a0cd58a5d5",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "267e81ce-fe24-4dcc-a82b-12deb1106b7e",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_waived_on_coe_in_escrow_no",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "screen_template_id": "294dceaa-ac7d-4f6f-9c9f-b67f41c451a8",
+  "name": "contingency_reports_review_waived",
+  "state": "draft",
+  "title": "What document reviews would you like to waive?",
+  "label": "Documents Waived",
+  "description": "You can waive all documents or just certain ones.",
+  "stage": "competitive",
+  "section": "contingencies",
+  "scope": {
+    "contingency_reports_review_no": true
+  },
+  "tips": "Waiving document review rights limits your ability to cancel based on information in those documents.",
+  "tip_links": {
+    "Understanding Report Types": {
+      "label": "Understanding Report Types", 
+      "url": "https://homebuyme.com/insights/all-about-contingency-reports-to-waive-or-not-to-waive/"
+    }
+  },
+  "small_print": "Examples of important documents include, Preliminary Title Report(s), Real Estate Transfer Disclosure (TDS), Seller Property Questionnaire (SPQ), HOA documents, Fire Hardening and Defensible Space (FHDS) disclosure , Square Footage and Lot Size (SFLS) disclosure, and several other government and/or statutory reports, disclosures and advisories.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "REPORTS-REVIEW-WAIVED-2024-001",
+    "notes": "Selection of document reviews to waive"
+  },
+  "components": {
+    "contingency_reports_review_waived": {
+      "id": "5349c40d-6dd4-401a-ac2e-ae39ab30dcac",
+      "component_type": "select_single_cards",
+      "name": "contingency_reports_review_waived",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select which document reviews to waive",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "bb17bbc5-bc84-4c04-8b84-1bdb34d48632",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_all_waived",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": true,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all document reviews",
+          "fields": [
+            {
+              "id": "ade311d5-97f1-4050-a245-78f5eb070a0c",
+              "name": "label",
+              "label": null,
+              "value": "Waive ALL document reviews"
+            },
+            {
+              "id": "b675cc5d-5656-400a-a6fc-e66025780c19",
+              "name": "description",
+              "label": null,
+              "value": "Waive your right to review all documents"
+            },
+            {
+              "id": "da134445-7e36-4bdb-955a-4c114a59cf2d",
+              "name": "image",
+              "label": null,
+              "value": "46_waiver_docs.png"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "b5f9b69b-c944-478b-99bd-4e808d485176",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_exceptions_govt",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all except government reports",
+          "fields": [
+            {
+              "id": "b0de7f11-2b0b-4424-bc9a-723ddb97e239",
+              "name": "label",
+              "label": null,
+              "value": "Waive ALL EXCEPT Government Reports"
+            },
+            {
+              "id": "67c3b638-7839-4642-a424-140aeebed21a",
+              "name": "description",
+              "label": null,
+              "value": "Keep your right to review government-issued reports"
+            },
+            {
+              "id": "e0aa6e9c-b9fc-40d9-9f90-c1b2cf3852b1",
+              "name": "image",
+              "label": null,
+              "value": "47_gov_reports.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "e8d6214e-5f12-4bdc-b549-a93a2c1e91cf",
+                "condition": {
+                  "id": "b4de1810-6542-4331-99b5-f64a7e1dd921",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "a2280767-ed37-44e9-80c3-7c36dbae9509",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_reports_review_exceptions_govt",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "43c5b960-a9bb-4624-b5b6-6b764bcb59dd",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_exceptions_state",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": null,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all except statutory and other disclosures",
+          "fields": [
+            {
+              "id": "0669b9fc-bbc6-4fd4-838d-f2ba16740a6f",
+              "name": "label",
+              "label": null,
+              "value": "Waive ALL EXCEPT Statutory and Other Disclosures"
+            },
+            {
+              "id": "d4ded812-107c-457e-a0a3-330e98ebae43",
+              "name": "description",
+              "label": null,
+              "value": "Keep your right to review statutory disclosures"
+            },
+            {
+              "id": "87c52877-5c05-4f64-93f1-0fecc9a0e999",
+              "name": "image",
+              "label": null,
+              "value": "48_disclosures_docs.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "d8819c01-ed56-4f60-8f85-b8d743bd98e5",
+                "condition": {
+                  "id": "44b08cf8-d0db-45ad-bb72-5665ceb8ab84",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "ade81142-a3e9-499b-8984-78e1514bbc3b",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_reports_review_exceptions_state",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b9afd007-d237-451d-9336-bfcf665d923a",
+          "component_type": "select_card",
+          "name": "contingency_reports_review_exceptions_other",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Waive all except other specified reports",
+          "fields": [
+            {
+              "id": "e7360ea8-c0fa-4f60-8288-16d5c366be2e",
+              "name": "label",
+              "label": null,
+              "value": "Waive ALL EXCEPT Other Reports"
+            },
+            {
+              "id": "4a2eab7e-4307-4133-b391-f4ef8286be43",
+              "name": "description",
+              "label": null,
+              "value": "Keep your right to review other specified reports"
+            },
+            {
+              "id": "86f0d208-2f62-4ea2-b2c2-390a0d0a63a9",
+              "name": "image",
+              "label": null,
+              "value": "49_reports_docs.png"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "4f826549-507f-43a8-8231-e03e0b101b18",
+                "condition": {
+                  "id": "efd1a422-356f-4176-8a0a-70b740009365",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "5ff15f49-1de2-42ac-a895-d92f871dbc06",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_reports_review_exceptions_other",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

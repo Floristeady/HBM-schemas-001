@@ -1,0 +1,173 @@
+{
+  "screen_template_id": "beab30ab-7f30-4e3a-999e-407117bee2a6",
+  "name": "contingency_sell_buyer_property_offer_obligations_start",
+  "state": "draft",
+  "title": "Timing of Buyer's Obligations",
+  "label": "Obligations Trigger",
+  "description": "Would you like to delay the beginning of your obligations in this offer based on the Sale of Your Property contingency?",
+  "stage": "advanced",
+  "section": "sell_buyer_property",
+  "scope": {
+    "contingency_sell_buyer_property": true
+  },
+  "tips": "Think this one through carefully, as you want the seller to know that you have skin the game, however you don't want to overcommit until you know the other buyer purchasing your existing property is for real.",
+  "tip_links": {},
+  "small_print": "Your selected timing option will affect when various obligations in the purchase agreement begin.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "OBLIGATIONS-START-2024-001",
+    "notes": "Timing trigger for offer obligations"
+  },
+  "components": {
+    "contingency_sell_buyer_property_offer_obligations_start": {
+      "id": "cd52c0e2-295c-4d04-bd65-acb7f2ffece6",
+      "component_type": "select_single_dropdown",
+      "name": "contingency_sell_buyer_property_offer_obligations_start",
+      "is_array": true,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": null,
+      "value": null,
+      "suggested": null,
+      "validation": {
+        "value_type": "array",
+        "required": true
+      },
+      "formatting": null,
+      "tooltip": "Select when your obligations should begin",
+      "fields": [],
+      "logic": [],
+      "children": [
+        {
+          "id": "c04a03a6-29ad-4b2f-b920-71c42502f1dc",
+          "component_type": "select_option",
+          "name": "contingency_sell_buyer_property_offer_obligations_start_acceptance",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": true,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Start upon acceptance",
+          "fields": [
+            {
+              "id": "2c8f734c-e41b-407d-8d65-ad54ec585800",
+              "name": "label",
+              "label": null,
+              "value": "No, start the clock upon offer acceptance"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "9ed23f71-5fc1-4eeb-95f4-97c21ef890c3",
+          "component_type": "select_option",
+          "name": "contingency_sell_buyer_property_offer_obligations_start_escrow_proof",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Start upon escrow proof",
+          "fields": [
+            {
+              "id": "e1eb861f-125b-4da6-8494-f4ec0e46c90b",
+              "name": "label",
+              "label": null,
+              "value": "Yes, start the clock once I deliver proof of escrow for the sale of my property"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "97ec03d0-9e16-4502-85f6-fffdcb9bab68",
+          "component_type": "select_option",
+          "name": "contingency_sell_buyer_property_offer_obligations_start_removal",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Start upon contingency removal",
+          "fields": [
+            {
+              "id": "602891ba-6b0b-4fde-9b6f-5272d6a4abf0",
+              "name": "label",
+              "label": null,
+              "value": "Yes, start the clock when I remove this contingency"
+            }
+          ],
+          "logic": [],
+          "children": []
+        },
+        {
+          "id": "492f8e0a-a079-418c-9282-fe4757cf711a",
+          "component_type": "select_option",
+          "name": "contingency_sell_buyer_property_offer_obligations_start_date",
+          "is_array": false,
+          "is_private": false,
+          "is_editable": true,
+          "is_required": false,
+          "is_visible": true,
+          "default_value": false,
+          "value": null,
+          "suggested": null,
+          "validation": null,
+          "formatting": null,
+          "tooltip": "Start on specific date",
+          "fields": [
+            {
+              "id": "c0a6b437-c3b9-4228-89c7-60424634f778",
+              "name": "label",
+              "label": null,
+              "value": "Yes, start the clock on a specific date"
+            }
+          ],
+          "logic": [
+            {
+              "rule": {
+                "id": "dd3cb77e-66da-40f5-a088-a536a09c02b5",
+                "condition": {
+                  "id": "cdb651c2-a437-4b54-8153-e031cc6707b0",
+                  "path": "this.value",
+                  "operator": "equals",
+                  "value": true
+                },
+                "action": {
+                  "id": "5ab3e1f2-c649-4a09-9327-7f1bc12bede0",
+                  "path": "globals",
+                  "operation": "set",
+                  "value": {
+                    "name": "contingency_sell_buyer_property_offer_obligations_start_date",
+                    "value": true
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  }
+}

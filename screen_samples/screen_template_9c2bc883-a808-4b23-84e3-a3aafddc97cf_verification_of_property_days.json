@@ -1,0 +1,68 @@
+{
+  "screen_template_id": "9c2bc883-a808-4b23-84e3-a3aafddc97cf",
+  "name": "verification_of_property_days",
+  "state": "draft",
+  "title": "Within how many days prior to Close of Escrow will you deliver a Verification of Property Condition form to the seller?",
+  "label": "Verification Days",
+  "description": "This shouldn't be too many days out from Close of Escrow.",
+  "stage": "standard",
+  "section": "performance",
+  "scope": {},
+  "tips": "The verification of property condition confirms the property's state just before closing. It is common to perform the final walkthrough after all furnishings have been moved out and the property has been cleaned.",
+  "tip_links": {},
+  "small_print": "Completing the verification too early may not capture last-minute property changes. Standard timing is 1-5 days before close of escrow.",
+  "is_required": true,
+  "is_private": false,
+  "is_editable": true,
+  "internal": {
+    "references": "VERIFICATION-DAYS-2024-001",
+    "notes": "Days before close for property condition verification"
+  },
+  "components": {
+    "verification_of_property_days": {
+      "id": "5befd648-df9c-4f3e-8a46-a946468bbe77",
+      "component_type": "input_number",
+      "name": "verification_of_property_days",
+      "is_array": false,
+      "is_private": false,
+      "is_editable": true,
+      "is_required": true,
+      "is_visible": true,
+      "default_value": 5,
+      "value": null,
+      "suggested": {
+        "max": 5,
+        "hint": "Standard timing is 1-5 days before close of escrow.",
+        "warning": ""
+      },
+      "validation": {
+        "value_type": "number",
+        "required": true,
+        "min_value": 1,
+        "max_value": 17
+      },
+      "formatting": {
+        "decimal_places": 0,
+        "is_placeholder": false
+      },
+      "tooltip": "Enter number of days before close for verification",
+      "fields": [
+        {
+          "id": "6e750f79-8d6c-4f35-9431-15b64be6001b",
+          "name": "placeholder",
+          "label": null,
+          "value": "Enter days (1-5)",
+          "validation": {
+            "required": true
+          },
+          "formatting": {
+            "type": "text",
+            "is_placeholder": true
+          }
+        }
+      ],
+      "logic": [],
+      "children": []
+    }
+  }
+}
