@@ -5,20 +5,20 @@ import uuid
 from datetime import datetime
 from typing import Dict, List, Any
 
-# Configuración global para modo test
-TEST_MODE = False  # Cambiar a False para procesar todas las filas
-TEST_ROWS = 10    # Número de filas a procesar en modo test
+# Global configuration for test mode
+TEST_MODE = False  # Change to False to process all rows
+TEST_ROWS = 10    # Number of rows to process in test mode
 
-# --- CONFIGURACIÓN DE FILTRADO DE FILAS ---
-# Opciones:
-# - 'all': procesa todas las filas
-# - 'range': procesa un rango de filas por índice (ej: 3 a 8)
-# - 'indices': procesa una lista de índices específicos
-# - 'ids': procesa una lista de Screen_IDs específicos
+# --- ROW FILTERING CONFIGURATION ---
+# Options:
+# - 'all': process all rows
+# - 'range': process a range of rows by index (e.g., 3 to 8)
+# - 'indices': process a list of specific indices
+# - 'ids': process a list of specific Screen_IDs
 ROW_SELECTION_MODE = 'indices'  # 'all', 'range', 'indices', 'ids'
-ROW_RANGE = (3, 8)          # Solo si ROW_SELECTION_MODE == 'range', incluye ambos extremos
-ROW_INDICES = [12, 14, 16, 22, 31, 32, 37, 46, 68]    # Solo si ROW_SELECTION_MODE == 'indices'
-ROW_IDS = ['id1', 'id2']    # Solo si ROW_SELECTION_MODE == 'ids'
+ROW_RANGE = (3, 8)          # Only if ROW_SELECTION_MODE == 'range', includes both ends
+ROW_INDICES = [12, 14, 16, 22, 31, 32, 37, 46, 68]    # Only if ROW_SELECTION_MODE == 'indices'
+ROW_IDS = ['id1', 'id2']    # Only if ROW_SELECTION_MODE == 'ids'
 
 """
 CSV to JSON Column Mapping Documentation
@@ -165,22 +165,22 @@ class ExcelToJsonConverter:
                 
                 # --- FILTRADO FLEXIBLE DE FILAS ---
                 if ROW_SELECTION_MODE == 'all':
-                    print("Procesando todas las filas")
+                    print("Processing all rows")
                 elif ROW_SELECTION_MODE == 'range':
                     start, end = ROW_RANGE
                     self.df = self.df.iloc[start:end+1]
-                    print(f"Procesando filas del índice {start} al {end}")
+                    print(f"Processing rows from index {start} to {end}")
                 elif ROW_SELECTION_MODE == 'indices':
-                    # Filtrar primero por los índices deseados
+                    # Filter first by desired indices
                     self.df = self.df.iloc[ROW_INDICES]
-                    print(f"Procesando filas con índices: {ROW_INDICES}")
+                    print(f"Processing rows with indices: {ROW_INDICES}")
                 elif ROW_SELECTION_MODE == 'ids':
                     self.df = self.df[self.df['Screen_ID'].isin(ROW_IDS)]
-                    print(f"Procesando filas con Screen_IDs: {ROW_IDS}")
+                    print(f"Processing rows with Screen_IDs: {ROW_IDS}")
                 else:
-                    print("ROW_SELECTION_MODE no reconocido, procesando todas las filas")
+                    print("ROW_SELECTION_MODE not recognized, processing all rows")
                 
-                # Después de filtrar, eliminar filas vacías y con Screen_ID nulo
+                # After filtering, remove empty rows and rows with null Screen_ID
                 self.df = self.df[self.df['Screen_ID'].notna()]
                 self.df = self.df.dropna(how='all')
                 
@@ -241,10 +241,10 @@ class ExcelToJsonConverter:
             return ""
         # Remove 'screen_' prefix if present
         name = name.replace('screen_', '')
-        # Si el nombre contiene comas, tomar solo la primera parte
+        # If name contains commas, take only the first part
         if ',' in name:
             name = name.split(',')[0].strip()
-        # Si el nombre termina en _yes o _no, remover ese sufijo
+        # If name ends with _yes or _no, remove that suffix
         if name.endswith('_yes') or name.endswith('_no'):
             name = name.rsplit('_', 1)[0]
         return name.strip()
@@ -254,7 +254,7 @@ class ExcelToJsonConverter:
         children = []
         for i, option in enumerate(options):
             option = option.strip()
-            # Crear nombre del child basado solo en el option, sin repetir el nombre del componente padre
+            # Create child name based only on the option, without repeating the parent component name
             child_name = option.lower().replace(' ', '_')
             
             child = {
@@ -266,7 +266,7 @@ class ExcelToJsonConverter:
                 "is_editable": True,
                 "is_required": False,
                 "is_visible": True,
-                "default_value": i == 0,  # Primera opción es true por defecto
+                "default_value": i == 0,  # First option is true by default
                 "value": i == 0,
                 "suggested": None,
                 "validation": None,
@@ -307,31 +307,31 @@ class ExcelToJsonConverter:
         options = self._get_value(row, 'options', 'Options')
         
         if component_type and component_name:
-            # Procesar el nombre del componente
+            # Process component name
             base_name = self._process_component_name(component_name)
             component_id = str(uuid.uuid4())
             
-            # Determinar el tipo de componente basado en Component type primero
+            # Determine component type based on Component type first
             mapped_type = self.component_type_mapping.get(component_type)
             
-            # Si no se encontró en Component type, intentar con Data Format
+            # If not found in Component type, try with Data Format
             if not mapped_type:
                 mapped_type = self.component_type_mapping.get(data_format)
             
-            # Si aún no se encontró, usar el tipo original
+            # If still not found, use original type
             if not mapped_type:
                 mapped_type = component_type
             
-            # Si es "text box" y no tiene opciones, forzar a input_text_area
+            # If it's "text box" and has no options, force to input_text_area
             if mapped_type == "text box" and not options:
                 mapped_type = "input_text_area"
             
-            # Para inputs, default_value y value deben ser null
+            # For inputs, default_value and value must be null
             if mapped_type.startswith('input_'):
                 default_value = None
                 value = None
             else:
-                # Para select_single_cards, default_value y value deben ser booleanos
+                # For select_single_cards, default_value and value must be boolean
                 if mapped_type == "select_single_cards":
                     default_value = True
                     value = True
@@ -339,7 +339,7 @@ class ExcelToJsonConverter:
                     default_value = self._process_value(self._get_value(row, 'default_value', 'Default Value'))
                     value = default_value
             
-            # Campos que sabemos que son requeridos y sus valores por defecto
+            # Fields we know are required and their default values
             component_obj = {
                 "id": component_id,
                 "component_type": mapped_type,
@@ -363,7 +363,7 @@ class ExcelToJsonConverter:
                 "children": []
             }
             
-            # Agregar children para select_single_cards y select_single_dropdown
+            # Add children for select_single_cards and select_single_dropdown
             if mapped_type in ["select_single_cards", "select_single_dropdown"] and options:
                 options_list = [opt.strip() for opt in options.split(',')]
                 if mapped_type == "select_single_cards":
@@ -467,15 +467,15 @@ class ExcelToJsonConverter:
         scope = self._process_scope(row)
         tip_links = self._process_tip_links(row)
         
-        # Campos que sabemos que son requeridos y sus valores por defecto
+        # Fields we know are required and their default values
         json_data = {
             "screen_template_id": screen_template_id,
-            "name": self._process_component_name(name),  # Remover 'screen_' prefix
-            "state": "draft",  # Valor por defecto
+            "name": self._process_component_name(name),  # Remove 'screen_' prefix
+            "state": "draft",  # Default value
             "title": title,
             "label": label,
             "description": description,
-            "stage": stage,    # Valor del CSV
+            "stage": stage,    # Value from CSV
             "section": section,
             "scope": scope,
             "tips": tips,
@@ -486,7 +486,7 @@ class ExcelToJsonConverter:
             "is_editable": True,
             "internal": {
                 "references": internal_reference,
-                "notes": ""  # Valor vacío por ahora
+                "notes": ""  # Empty value for now
             },
             "components": self._create_components(row)
         }
@@ -512,12 +512,37 @@ class ExcelToJsonConverter:
             print(f"Created JSON file: {output_file}")
 
 def main():
-    # Example usage
-    input_file = "docs/Edited Screens_TH-01-03-2025-Arturo Updates - Screens.csv"
+    # Configuration
+    input_dir = "csv-to-convert"
     base_output_dir = "json"
     
-    converter = ExcelToJsonConverter(input_file, base_output_dir, skiprows_real_csv=True)
-    converter.convert()
+    # Check if input directory exists
+    if not os.path.exists(input_dir):
+        print(f"Error: Directory '{input_dir}' does not exist")
+        return
+        
+    # Find all CSV files in the input directory
+    csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
+    
+    if not csv_files:
+        print(f"Error: No CSV files found in '{input_dir}'")
+        return
+        
+    print(f"Found {len(csv_files)} CSV files:")
+    for i, file in enumerate(csv_files, 1):
+        print(f"{i}. {file}")
+    
+    # Process each CSV file
+    for csv_file in csv_files:
+        input_file = os.path.join(input_dir, csv_file)
+        print(f"\nProcessing file: {csv_file}")
+        
+        try:
+            converter = ExcelToJsonConverter(input_file, base_output_dir, skiprows_real_csv=True)
+            converter.convert()
+        except Exception as e:
+            print(f"Error processing {csv_file}: {str(e)}")
+            continue
 
 if __name__ == "__main__":
     main() 

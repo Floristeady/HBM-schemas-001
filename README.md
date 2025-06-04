@@ -1,4 +1,76 @@
-# CSV to JSON Converter Documentation
+# CSV to JSON Converter for Screen Templates
+
+## Project Overview
+
+This project is a specialized CSV to JSON converter designed for screen template generation. It transforms structured CSV data into a standardized JSON format that defines screen templates with their components, validations, and relationships.
+
+### Key Features
+- Converts CSV files to structured JSON screen templates
+- Handles multiple component types (inputs, selectors, etc.)
+- Supports complex component hierarchies
+- Validates output against a predefined schema
+- Flexible row selection for processing specific data
+
+### Project Structure
+```
+.
+├── excel_to_json_converter.py  # Main conversion script
+├── validate_json.py           # JSON validation script
+├── screen_schema.json         # Validation schema
+├── requirements.txt           # Python dependencies
+├── csv-to-convert/           # Directory for input CSV files
+│   └── .gitkeep             # Keeps directory in git
+├── json/                     # Directory for output JSON files
+│   └── .gitkeep             # Keeps directory in git
+└── README.md                 # This documentation
+```
+
+### How It Works
+
+1. **Input Processing**
+   - Reads CSV files from the `csv-to-convert` directory
+   - Supports flexible row selection (all rows, range, specific indices, or IDs)
+   - Validates required fields and data structure
+
+2. **Component Mapping**
+   - Maps CSV columns to JSON fields using predefined mappings
+   - Handles component type conversion (e.g., "Choice" → "select_single_cards")
+   - Processes component names and relationships
+
+3. **JSON Generation**
+   - Creates a new timestamped output directory under `json/`
+   - Generates unique IDs for components
+   - Maintains component hierarchy and relationships
+   - Ensures consistent field ordering
+
+4. **Validation**
+   - Validates generated JSON against schema
+   - Ensures required fields are present
+   - Checks component structure and relationships
+
+### Project Logic
+
+The project follows these key principles:
+
+1. **Component Type Mapping**
+   - Inputs: text boxes, number fields, etc.
+   - Selectors: cards, dropdowns, etc.
+   - Each type has specific validation and structure requirements
+
+2. **Component Hierarchy**
+   - Parent components can have children (e.g., select cards)
+   - Children inherit properties from parents
+   - Maintains proper relationships and dependencies
+
+3. **Data Validation**
+   - Required fields must be present
+   - Component types must be valid
+   - Relationships must be properly structured
+
+4. **Flexible Processing**
+   - Can process all rows or specific selections
+   - Supports different input formats
+   - Maintains data integrity throughout conversion
 
 ## Table of Contents
 1. [General Description](#general-description)
@@ -194,15 +266,54 @@ Each component in the JSON must have the following minimum structure:
 }
 ```
 
-## Usage
+## Getting Started
 
-1. Place the CSV file in the `docs/` directory
-2. Run the conversion script:
+### Prerequisites
+- Python 3.x
+- Required Python packages:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+### First Time Setup
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd [repository-name]
+   ```
+
+2. The required directories are already included in the repository:
+   - `csv-to-convert/`: Place your CSV files here
+   - `json/`: Generated JSON files will be stored here
+
+3. Place your CSV file in the `csv-to-convert` directory
+   - The CSV should follow the structure described in [CSV Column Mapping](#csv-column-mapping)
+   - Make sure the CSV has all required fields
+
+4. Configure row selection (optional):
+   - Open `excel_to_json_converter.py`
+   - Modify the `ROW_SELECTION_MODE` variable:
+     - `'all'`: Process all rows
+     - `'range'`: Process a range of rows (set `ROW_RANGE`)
+     - `'indices'`: Process specific indices (set `ROW_INDICES`)
+     - `'ids'`: Process specific Screen_IDs (set `ROW_IDS`)
+
+5. Run the converter:
    ```bash
    python excel_to_json_converter.py
    ```
-3. JSON files will be generated in the `json/` directory
-4. Validate the generated files:
-   ```bash
-   python validate_json.py
-   ``` 
+
+6. Check the output:
+   - JSON files will be generated in a timestamped directory under `json/`
+   - Each file will be named with its `screen_template_id`
+
+### Troubleshooting
+- If you get a "No CSV files found" error, check that your file is in the `csv-to-convert` directory
+- If validation fails, check that your CSV has all required fields
+- If component types are not mapping correctly, verify the component type in your CSV matches the supported types
+
+### Common Issues
+1. **Missing Required Fields**: Ensure your CSV has all required fields listed in [Required Fields](#required-fields)
+2. **Invalid Component Types**: Check that component types match the supported types in [Component Type Mapping](#component-type-mapping)
+3. **File Location**: Make sure your CSV is in the correct directory (`csv-to-convert`)
+4. **CSV Format**: Ensure your CSV is properly formatted with headers and no BOM characters 

@@ -8,7 +8,12 @@ venv/
 ENV/
 
 # JSON output
-json/
+json/*
+!json/.gitkeep
+
+# CSV files
+csv-to-convert/*
+!csv-to-convert/.gitkeep
 
 # IDE
 .vscode/
@@ -16,4 +21,10 @@ json/
 
 # OS
 .DS_Store
-Thumbs.db 
+**/.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log 
