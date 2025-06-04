@@ -4,20 +4,41 @@ __pycache__/
 *$py.class
 *.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
 venv/
 ENV/
 
-# JSON output
-json/*
-!json/.gitkeep
-
-# CSV files
-csv-to-convert/*
-!csv-to-convert/.gitkeep
-
 # IDE
-.vscode/
 .idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+json/
+csv-to-convert/
+*.csv
+*.json
+
+# Timezone data
+venv/lib/python3.12/site-packages/pytz/zoneinfo/
+venv/lib/python3.12/site-packages/tzdata/zoneinfo/
 
 # OS
 .DS_Store
