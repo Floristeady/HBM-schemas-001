@@ -31,8 +31,6 @@ ENV/
 *.swo
 
 # Project specific
-json/
-csv-to-convert/
 *.csv
 *.json
 
