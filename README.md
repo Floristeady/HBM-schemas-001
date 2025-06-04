@@ -1,5 +1,7 @@
 # HBM-schemas-001: CSV to JSON Converter for Screen Templates
 
+A Vibe Coding project for converting CSV files to standardized JSON screen templates.
+
 ## Project Overview
 
 This project is a specialized CSV to JSON converter designed for screen template generation. It transforms structured CSV data into a standardized JSON format that defines screen templates with their components, validations, and relationships.
